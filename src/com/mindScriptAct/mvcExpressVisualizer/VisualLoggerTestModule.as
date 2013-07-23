@@ -22,6 +22,7 @@ import com.mindScriptAct.mvcExpressVisualizer.view.testB.TestViewBMediator;
 import com.mindscriptact.mvcExpressLogger.MvcExpressLogger;
 
 import flash.display.Shape;
+import flash.display.Sprite;
 import flash.display.StageScaleMode;
 import flash.events.Event;
 import flash.geom.Point;
@@ -33,7 +34,7 @@ import mvcexpress.utils.checkClassStringConstants;
  * COMMENT
  * @author Raimundas Banevicius (http://www.mindscriptact.com/)
  */
-public class VisualLoggerTestModule extends ModuleSprite {
+public class VisualLoggerTestModule extends Sprite {
 	private var testViewA1Button:PushButton;
 	private var testViewA1:TestViewA;
 	private var testViewA2Button:PushButton;
@@ -48,6 +49,8 @@ public class VisualLoggerTestModule extends ModuleSprite {
 	private var testMessageB2Button:PushButton;
 	private var testMessageB3Button:PushButton;
 
+	public var module:TestModule = new TestModule(ModuleNames.SHELL);
+
 	public function VisualLoggerTestModule() {
 		CONFIG::debug {
 			MvcExpress.debugFunction = trace;
@@ -55,20 +58,10 @@ public class VisualLoggerTestModule extends ModuleSprite {
 			checkClassStringConstants(Msg, DataMsg, ViewMsg);
 		}
 		MvcExpressLogger.init(this.stage, 600, 0, 900, 400, 1, true, MvcExpressLogger.VISUALIZER_TAB);
-		super(ModuleNames.SHELL);
 		//
 		this.stage.scaleMode = StageScaleMode.NO_SCALE;
-	}
 
-	//private function myDebugFunction(traceObj:TraceObj):void {
-	//if (traceObj.action == MvcTraceActions.MEDIATORMAP_MEDIATE) {
-	//if (traceObj.mediatorClass == TestViewAMediator) {
-	//trace( "TestViewAMediator mediates :" +  traceObj.viewObject);
-	//}
-	//}
-	//}
 
-	override protected function onInit():void {
 		var moduleLabel:Label;
 		var roundRectangle:Shape;
 		//trace("ModularSampleShellModule.onInit");
@@ -86,23 +79,24 @@ public class VisualLoggerTestModule extends ModuleSprite {
 
 
 		// set up controller
-		commandMap.map(Message.TEST_COMMAND_B, TestCommandB);
-		commandMap.map(Message.TEST_MEDIATOR_A_COMMAND, TestCommandA);
-		commandMap.map(Message.TEST_MEDIATOR_B_COMMAND, TestCommandB);
-		commandMap.map(Message.TEST_PROXY_TO_COMMAND, TestCommandBlank);
-		commandMap.map(Message.TEST_COMMAND_TO_COMMAND, TestCommandBlank);
+		module.testCommandMap.map(Message.TEST_COMMAND_B, TestCommandB);
+		module.testCommandMap.map(Message.TEST_MEDIATOR_A_COMMAND, TestCommandA);
+		module.testCommandMap.map(Message.TEST_MEDIATOR_B_COMMAND, TestCommandB);
+		module.testCommandMap.map(Message.TEST_PROXY_TO_COMMAND, TestCommandBlank);
+		module.testCommandMap.map(Message.TEST_COMMAND_TO_COMMAND, TestCommandBlank);
 
 		// set up data
-		proxyMap.map(new TestProxyA());
-		proxyMap.map(new TestProxyB(), ITestProxyB, "BProxyName");
+		module.testProxyMap.map(new TestProxyA());
+		module.testProxyMap.map(new TestProxyB(), ITestProxyB, "BProxyName");
 
 		// set-up view
-		mediatorMap.map(VisualLoggerTestModule, VisualLoggerTestModuleMediator);
-		mediatorMap.map(TestViewA, TestViewAMediator);
-		mediatorMap.map(TestViewB, TestViewBMediator);
+		module.testMediatorMap.map(VisualLoggerTestModule, VisualLoggerTestModuleMediator);
+		module.testMediatorMap.map(TestViewA, TestViewAMediator);
+		module.testMediatorMap.map(TestViewB, TestViewBMediator);
 
 		// start
-		mediatorMap.mediate(this);
+		module.testMediatorMap.mediate(this);
+
 
 		//
 		testViewA1Button = new PushButton(this, 10, 500, "Add TestViewA 1", handleAddMediatorA1);
@@ -139,27 +133,28 @@ public class VisualLoggerTestModule extends ModuleSprite {
 
 
 	private function handleAddProxyC(event:Event):void {
+		module
 		if (testProxyC) {
-			proxyMap.unmap(TestProxyC);
+			module.testProxyMap.unmap(TestProxyC);
 			testProxyC = null;
 			testProxyCButton.label = "Add TestProxyC";
 		} else {
 			testProxyC = new TestProxyC();
-			proxyMap.map(testProxyC);
+			module.testProxyMap.map(testProxyC);
 			testProxyCButton.label = "Remove TestProxyC";
 		}
 	}
 
 	private function handleAddMediatorA1(event:Event):void {
 		if (testViewA1) {
-			mediatorMap.unmediate(testViewA1);
+			module.testMediatorMap.unmediate(testViewA1);
 			this.removeChild(testViewA1);
 			testViewA1 = null;
 			testViewA1Button.label = "Add TestViewA 1";
 		} else {
 			testViewA1 = new TestViewA();
 			this.addChild(testViewA1);
-			mediatorMap.mediate(testViewA1);
+			module.testMediatorMap.mediate(testViewA1);
 			testViewA1Button.label = "Remove TestViewA 1";
 			testViewA1.x = 20;
 			testViewA1.y = 20;
@@ -168,14 +163,14 @@ public class VisualLoggerTestModule extends ModuleSprite {
 
 	private function handleAddMediatorA2(event:Event):void {
 		if (testViewA2) {
-			mediatorMap.unmediate(testViewA2);
+			module.testMediatorMap.unmediate(testViewA2);
 			this.removeChild(testViewA2);
 			testViewA2 = null;
 			testViewA2Button.label = "Add TestViewA 2";
 		} else {
 			testViewA2 = new TestViewA();
 			this.addChild(testViewA2);
-			mediatorMap.mediate(testViewA2);
+			module.testMediatorMap.mediate(testViewA2);
 			testViewA2Button.label = "Remove TestViewA 2";
 			testViewA2.x = 300;
 			testViewA2.y = 20;
@@ -184,7 +179,7 @@ public class VisualLoggerTestModule extends ModuleSprite {
 
 	private function handleAddMediatorB1(event:Event):void {
 		if (testViewB1) {
-			mediatorMap.unmediate(testViewB1);
+			module.testMediatorMap.unmediate(testViewB1);
 			this.removeChild(testViewB1);
 			testViewB1 = null;
 			testViewB1Button.label = "Add TestViewB 1";
@@ -192,7 +187,7 @@ public class VisualLoggerTestModule extends ModuleSprite {
 		} else {
 			testViewB1 = new TestViewB();
 			this.addChild(testViewB1);
-			mediatorMap.mediate(testViewB1);
+			module.testMediatorMap.mediate(testViewB1);
 			testViewB1Button.label = "Remove TestViewB 1";
 			testViewB1.x = 20;
 			testViewB1.y = 200;
@@ -201,14 +196,14 @@ public class VisualLoggerTestModule extends ModuleSprite {
 
 	private function handleAddMediatorB2(event:Event):void {
 		if (testViewB2) {
-			mediatorMap.unmediate(testViewB2);
+			module.testMediatorMap.unmediate(testViewB2);
 			this.removeChild(testViewB2);
 			testViewB2 = null;
 			testViewB2Button.label = "Add TestViewB 2";
 		} else {
 			testViewB2 = new TestViewB();
 			this.addChild(testViewB2);
-			mediatorMap.mediate(testViewB2);
+			module.testMediatorMap.mediate(testViewB2);
 			testViewB2Button.label = "Remove TestViewB 2";
 			testViewB2.x = 300;
 			testViewB2.y = 200;
@@ -216,15 +211,15 @@ public class VisualLoggerTestModule extends ModuleSprite {
 	}
 
 	private function handleCommandA(event:Event):void {
-		commandMap.execute(TestCommandA, "test param A")
+		module.testCommandMap.execute(TestCommandA, "test param A")
 	}
 
 	private function handleCommandB(event:Event):void {
-		sendMessage(Message.TEST_COMMAND_B, new Point(10, 20));
+		module.sendMessage(Message.TEST_COMMAND_B, new Point(10, 20));
 	}
 
 	private function handleCommandC(event:Event):void {
-		sendMessage(Message.TEST_MODULE_TO_MEDIATORS_A);
+		module.sendMessage(Message.TEST_MODULE_TO_MEDIATORS_A);
 	}
 
 }

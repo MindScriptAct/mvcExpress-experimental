@@ -1,5 +1,4 @@
 package com.mindScriptAct.codeSnippetsFlex {
-import com.gskinner.performance.PerformanceTest;
 import com.mindScriptAct.codeSnippetsFlex.controller.SampleFlexCommand;
 import com.mindScriptAct.codeSnippetsFlex.controller.params.ComplexParamsFlex;
 import com.mindScriptAct.codeSnippetsFlex.messages.MsgFlex;
@@ -22,7 +21,6 @@ import mvcexpress.utils.checkClassStringConstants;
  * @author Raimundas Banevicius (http://www.mindscriptact.com/)
  */
 public class SnippetAppFlexModule extends ModuleCore {
-	private var performanceTest:PerformanceTest;
 	private var coreInitTime:int;
 
 	////////////////////////////

@@ -32,7 +32,7 @@ public class SpriteModuleTest extends Sprite {
 		moduleCore = new ModuleCore("SpriteModuleTest");
 
 
-		MvcExpressLogger.init(this.stage, 0, 0, 900, 500, 0.9, true, MvcExpressLogger.VISUALIZER_TAB);
+		//MvcExpressLogger.init(this.stage, 0, 0, 900, 500, 0.9, true, MvcExpressLogger.VISUALIZER_TAB);
 
 		super();
 

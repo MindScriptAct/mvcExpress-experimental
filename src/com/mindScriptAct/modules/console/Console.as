@@ -1,30 +1,24 @@
 package com.mindScriptAct.modules.console {
 import com.bit101.components.PushButton;
 import com.bit101.components.TextArea;
-import com.mindScriptAct.modularSample.constants.ScopeNames;
 import com.mindScriptAct.modules.ModuleNames;
-import com.mindScriptAct.modules.console.controller.HandleInputCommand;
-import com.mindScriptAct.modules.console.model.ConsoleLogProxy;
-import com.mindScriptAct.modules.console.msg.ConsoleDataMsg;
-import com.mindScriptAct.modules.console.msg.ConsoleMsg;
-import com.mindScriptAct.modules.console.msg.ConsoleViewMsg;
-import com.mindScriptAct.modules.console.view.ConsoleMediator;
-import com.mindScriptAct.modules.globalMessages.GlobalMessage;
-import com.mindscriptact.mvcExpressLogger.MvcExpressLogger;
+import com.mindScriptAct.modules.console.controller.InitConsoleModuleCommand;
 
 import flash.display.Sprite;
 import flash.text.TextField;
 import flash.text.TextFieldType;
 
-import mvcexpress.utils.checkClassStringConstants;
+import mvcexpress.modules.ModuleCore;
 
 /**
  * COMMENT
  * @author Raimundas Banevicius (http://www.mindscriptact.com/)
  */
-public class Console extends ModuleSprite {
+public class Console extends Sprite {
 
-	private var consoleId:int;
+	private var module:ModuleCore;
+
+	public var consoleId:int;
 
 	public var outputTf:TextArea;
 	public var inputTf:TextField;
@@ -32,43 +26,13 @@ public class Console extends ModuleSprite {
 
 	public function Console(consoleId:int = 0) {
 		this.consoleId = consoleId;
-		super(ModuleNames.CONSOLE + this.consoleId);
-	}
 
-	override protected function onInit():void {
-		trace("Console.onInit");
+		module = new ModuleCore(ModuleNames.CONSOLE + this.consoleId);
 
-		registerScope(ScopeNames.FIRST_SCOPE);
-		registerScope(ScopeNames.EVEN_SCOPE);
-		registerScope(ScopeNames.ALL_SCORE);
-
-		// for debugging
-		CONFIG::debug {
-			checkClassStringConstants(ConsoleMsg, ConsoleDataMsg, ConsoleViewMsg);
-			MvcExpressLogger.init(this.stage, 700, 0, 800, 400, 1, true);
-		}
-
-		// set up commands
-		commandMap.map(ConsoleViewMsg.INPUT_MESSAGE, HandleInputCommand);
-
-		commandMap.map(GlobalMessage.SEND_INPUT_MESSAGE_TO_ALL, HandleInputCommand);
-
-		if (consoleId == 1) {
-			commandMap.scopeMap(ScopeNames.FIRST_SCOPE, GlobalMessage.SEND_TARGETED_INPUT_MESSAGE, HandleInputCommand);
-		}
-		if (consoleId == 2 || consoleId == 4) {
-			commandMap.scopeMap(ScopeNames.EVEN_SCOPE, GlobalMessage.SEND_TARGETED_INPUT_MESSAGE, HandleInputCommand);
-		}
-		commandMap.scopeMap(ScopeNames.ALL_SCORE, GlobalMessage.SEND_TARGETED_INPUT_MESSAGE, HandleInputCommand);
-
-
-		// set up view
-		proxyMap.map(new ConsoleLogProxy(consoleId));
-		mediatorMap.map(Console, ConsoleMediator);
-
-		// start main view.
 		renderConsoleView();
-		mediatorMap.mediate(this);
+
+		module.executeCommand(InitConsoleModuleCommand, this);
+
 
 	}
 
@@ -100,9 +64,8 @@ public class Console extends ModuleSprite {
 
 	}
 
-	override protected function onDispose():void {
-		trace("Console.onDispose");
+	public function disposeModule():void {
+		module.disposeModule();
 	}
-
 }
 }

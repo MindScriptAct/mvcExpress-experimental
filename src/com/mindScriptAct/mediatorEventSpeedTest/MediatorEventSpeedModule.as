@@ -1,22 +1,24 @@
 package com.mindScriptAct.mediatorEventSpeedTest {
-import com.mindScriptAct.mediatorEventSpeedTest.view.MediatorEventSpeedModuleMediator;
+import com.mindScriptAct.mediatorEventSpeedTest.controller.DoMediatorEventSpeedTestCommand;
+
+import flash.display.Sprite;
+
+import mvcexpress.modules.ModuleCore;
 
 /**
  * COMMENT
  * @author Raimundas Banevicius (http://www.mindscriptact.com/)
  */
-public class MediatorEventSpeedModule extends ModuleSprite {
+public class MediatorEventSpeedModule extends Sprite {
+
+	private var module:ModuleCore = new ModuleCore("MediatorEventSpeedModule");
 
 	public function MediatorEventSpeedModule() {
 
-	}
-
-	override protected function onInit():void {
 		trace("MediatorEventSpeedModule.onInit");
 
-		mediatorMap.map(MediatorEventSpeedModule, MediatorEventSpeedModuleMediator);
+		module.executeCommand(DoMediatorEventSpeedTestCommand, this);
 
-		mediatorMap.mediate(this);
 
 	}
 }

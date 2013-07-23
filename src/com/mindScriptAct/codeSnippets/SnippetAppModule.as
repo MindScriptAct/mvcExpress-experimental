@@ -1,5 +1,4 @@
 package com.mindScriptAct.codeSnippets {
-import com.gskinner.performance.PerformanceTest;
 import com.mindScriptAct.codeSnippets.controller.SampleCommand;
 import com.mindScriptAct.codeSnippets.controller.params.ComplexParams;
 import com.mindScriptAct.codeSnippets.messages.DataMsg;
@@ -19,7 +18,6 @@ import mvcexpress.utils.checkClassStringConstants;
  * @author Raimundas Banevicius (http://www.mindscriptact.com/)
  */
 public class SnippetAppModule extends ModuleCore {
-	private var performanceTest:PerformanceTest;
 	private var coreInitTime:int;
 
 	////////////////////////////
