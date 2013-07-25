@@ -11,6 +11,11 @@
 
 		private function creationCompleteHandler(event:Event):void {
 
+
+			CONFIG::debug {
+				MvcExpressLogger.init(this.stage, 0, 0, 900, 500, 0.9, true, MvcExpressLogger.VISUALIZER_TAB);
+			}
+
 			//
 			stage.scaleMode = StageScaleMode.NO_SCALE;
 			stage.align = StageAlign.TOP_LEFT;

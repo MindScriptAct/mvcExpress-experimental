@@ -12,9 +12,11 @@ import flash.utils.setTimeout;
 public class MvcExpressVisualizerScreen extends Sprite {
 	private var screenWidth:int;
 	private var screenHeight:int;
+
 	private var mediators:Vector.<Object> = new Vector.<Object>();
 	private var proxies:Vector.<Object> = new Vector.<Object>();
 	private var commands:Vector.<Object> = new Vector.<Object>();
+
 	private var currentModuleName:String;
 	private var moduleLabel:Mvce_Label;
 	static private const PROXY_START_X:Number = 600;
@@ -63,32 +65,35 @@ public class MvcExpressVisualizerScreen extends Sprite {
 	//     mediators
 	//----------------------------------
 
-	public function addMediators(mediators:Vector.<Object>):void {
+	public function addMediators(inMediators:Vector.<Object>):void {
+//		trace(" #########################################  add Mediators ", inMediators)
 		// remove old mediators
 		if (this.mediators) {
-			for (var k:int = 0; k < this.mediators.length; k++) {
-				if (this.mediators[k].view) {
-					if (this.contains(this.mediators[k].view)) {
-						this.removeChild(this.mediators[k].view);
+			while (this.mediators.length) {
+				var mediatorObj:Object = this.mediators.shift();
+				if (mediatorObj.view) {
+					if (this.contains(mediatorObj.view)) {
+						this.removeChild(mediatorObj.view);
 					}
 				}
 			}
 		}
 		//
-		if (mediators) {
-			this.mediators = mediators;
+		if (inMediators) {
 			//trace("MvcExpressVisualizerScreen.addMediators > mediators : " + mediators);
-			for (var i:int = 0; i < mediators.length; i++) {
-				addMediator(mediators[i]);
+			for (var i:int = 0; i < inMediators.length; i++) {
+				addMediator(inMediators[i]);
 			}
-			for (var j:int = 0; j < mediators.length; j++) {
-				mediators[j].view.y = j * 20 + 50;
-				redrawMediatorDependencies(mediators[j]);
+			for (var j:int = 0; j < inMediators.length; j++) {
+				inMediators[j].view.y = j * 20 + 50;
+				redrawMediatorDependencies(inMediators[j]);
 			}
 		}
 	}
 
 	public function addMediator(mediatorLogObj:Object):void {
+//		trace(" #########################################  add mediator ", mediatorLogObj);
+		this.mediators.push(mediatorLogObj);
 		var mediatorLabel:Mvce_Label;
 		if (mediatorLogObj.view == null) {
 			mediatorLogObj.view = new Mvce_Label(null, 5, 0, mediatorLogObj.viewObject.name + "-" + mediatorLogObj.mediatorClass);
@@ -140,6 +145,7 @@ public class MvcExpressVisualizerScreen extends Sprite {
 	public function drawMessageToMediator(messageLogObj:Object, possition:int):void {
 		var messageFromObject:Object;
 		var messageShape:Shape;
+//		trace(" #########################################  Drow message to mediator", messageLogObj, possition)
 		if (mediators[possition]) {
 			var mediatorLabel:Mvce_Label = mediators[possition].view;
 			if (mediatorLabel) {
@@ -269,16 +275,15 @@ public class MvcExpressVisualizerScreen extends Sprite {
 	public function addProxies(proxies:Vector.<Object>):void {
 		// remove old proxies
 		if (this.proxies) {
-			for (var k:int = 0; k < this.proxies.length; k++) {
-				if (this.contains(this.proxies[k].view)) {
-					this.removeChild(this.proxies[k].view);
+			while (this.proxies.length) {
+				var proxyObj:Object = this.proxies.pop();
+				if (this.contains(proxyObj.view)) {
+					this.removeChild(proxyObj.view);
 				}
 			}
 		}
 		//
 		if (proxies) {
-			this.proxies = proxies;
-
 			for (var i:int = 0; i < proxies.length; i++) {
 				addProxy(proxies[i]);
 			}
@@ -291,6 +296,7 @@ public class MvcExpressVisualizerScreen extends Sprite {
 
 	public function addProxy(proxyLogObj:Object):void {
 		var proxyLabel:Mvce_Label;
+		this.proxies.push(proxyLogObj);
 		if (proxyLogObj.view == null) {
 			proxyLogObj.view = new Mvce_Label(null, 5, 0, proxyLogObj.proxyObject + "-" + proxyLogObj.injectClass + " " + proxyLogObj.name);
 			(proxyLogObj.view as Mvce_Label).textField.borderColor = 0x3E3EFF;

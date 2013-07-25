@@ -32,6 +32,7 @@ public class MainAppMediator extends Mediator {
 		////////////////////////////
 		addHandler(Msg.TEST_DATA_MESSAGE, handleTestDataMessage);
 
+		trace(" #########################################  SEND CRASIHNG MESSAGE")
 		sendMessage(Msg.TEST_DATA_MESSAGE, "SampleAppMediator works!!!");
 
 		removeHandler(Msg.TEST_DATA_MESSAGE, handleTestDataMessage);

@@ -23,7 +23,7 @@ public class CircularDepenednyModule extends Sprite {
 
 	public function CircularDepenednyModule() {
 
-		//MvcExpressLogger.init(this.stage, 0, 0, 900, 500, 0.9, true, MvcExpressLogger.VISUALIZER_TAB);
+		MvcExpressLogger.init(this.stage, 0, 0, 900, 500, 0.9, true, MvcExpressLogger.VISUALIZER_TAB);
 
 		module.executeCommand(DoCircularDependencyTestCommand);
 

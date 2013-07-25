@@ -6,14 +6,18 @@ import flash.display.StageScaleMode;
 import flash.events.Event;
 import flash.utils.setTimeout;
 
+import mvcexpress.modules.ModuleCore;
+
 /**
  * COMMENT
  * @author Raimundas Banevicius (http://www.mindscriptact.com/)
  */
 public class LiveVisualizer extends Sprite {
-	
+
 	private var appModule:LiveVisualizerModule;
-	
+
+	private var blankModule:ModuleCore;
+
 	public function LiveVisualizer():void {
 		if (stage) {
 			init();
@@ -21,7 +25,7 @@ public class LiveVisualizer extends Sprite {
 			addEventListener(Event.ADDED_TO_STAGE, init);
 		}
 	}
-	
+
 	private function init(event:Event = null):void {
 		removeEventListener(Event.ADDED_TO_STAGE, init);
 		//
@@ -30,11 +34,11 @@ public class LiveVisualizer extends Sprite {
 		// vm warm up:
 		setTimeout(start, 300);
 	}
-	
+
 	private function start():void {
-		
+
 		MvcExpressLogger.init(this.stage, 600, 0, 900, 500, 0.9, true, MvcExpressLogger.ENGINE_TAB);
-		
+
 		////////////////////////////
 		// Inits framework.
 		////////////////////////////
@@ -43,7 +47,8 @@ public class LiveVisualizer extends Sprite {
 		// start our application.
 		////////////////////////////
 		appModule.start(this);
-	
+
+		blankModule = new ModuleCore("blankModule");
 	}
 
 }

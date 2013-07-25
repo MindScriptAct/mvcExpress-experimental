@@ -70,6 +70,7 @@ public class MvcExpressLogger {
 	private var initTab:String;
 
 	static private var stage:Stage;
+
 	static private var mvcExpressClass:Class;
 	static private var moduleManagerClass:Class;
 
@@ -311,13 +312,15 @@ public class MvcExpressLogger {
 			allButtons.push(commandMapingButton);
 
 			//
-			if (moduleManagerClass["listMappedProcesses"] != null) {
-				var processMapingButton:Mvce_PushButton = new Mvce_PushButton(logWindow, 0, -0, ENGINE_TAB, handleButtonClick);
-				processMapingButton.toggle = true;
-				processMapingButton.width = 60;
-				processMapingButton.x = allButtons[allButtons.length - 1].x + allButtons[allButtons.length - 1].width + 5;
-				allButtons.push(processMapingButton);
-			}
+			//if (moduleManagerClass["listMappedProcesses"] != null) {
+			//	if (moduleManagerClass["listMappedProcesses"]() != "Not supported.") {
+					var processMapingButton:Mvce_PushButton = new Mvce_PushButton(logWindow, 0, -0, ENGINE_TAB, handleButtonClick);
+					processMapingButton.toggle = true;
+					processMapingButton.width = 60;
+					processMapingButton.x = allButtons[allButtons.length - 1].x + allButtons[allButtons.length - 1].width + 5;
+					allButtons.push(processMapingButton);
+			//	}
+			//}
 
 			var clearButton:Mvce_PushButton = new Mvce_PushButton(logWindow, 0, 5, "clear log", handleClearLog);
 			clearButton.x = allButtons[allButtons.length - 1].x + allButtons[allButtons.length - 1].width + 10;
@@ -424,7 +427,6 @@ public class MvcExpressLogger {
 
 		if (currentTogleButton != targetButton) {
 			currentTogleButton = targetButton;
-
 			for (var i:int = 0; i < allButtons.length; i++) {
 				if (allButtons[i] != targetButton) {
 					allButtons[i].selected = false;
@@ -454,17 +456,14 @@ public class MvcExpressLogger {
 			render();
 			if (currentScreen) {
 				logWindow.addChild(currentScreen);
-
 			}
 		} else {
 			currentTogleButton.selected = true;
 		}
-
 	}
 
 	private function render():void {
 		isRenderWaiting = false;
-
 		switch (currentTabButtonName) {
 			case LOG_TAB:
 				(currentScreen as MvcExpressLogScreen).showLog(logText);
@@ -487,11 +486,14 @@ public class MvcExpressLogger {
 				(currentScreen as MvcExpressLogScreen).scrollDown(false);
 				break;
 			case ENGINE_TAB:
-				(currentScreen as MvcExpressLogScreen).showLog(moduleManagerClass["listMappedProcesses"](currentModuleName));
+				var result:String = moduleManagerClass["invokeModuleFunction"](currentModuleName, "listMappedProcesses") as String;
+				if (result.substr(0, 72) == "Failed to invoke blankModule module function, named: listMappedProcesses") {
+					result = "This module does not support Processes. Please use mvcExpress live DLC class: ModuleCoreLive for this feature."
+				}
+				(currentScreen as MvcExpressLogScreen).showLog(result);
 				(currentScreen as MvcExpressLogScreen).scrollDown(false);
 				break;
 			case VISUALIZER_TAB:
-
 				break;
 			default:
 		}
