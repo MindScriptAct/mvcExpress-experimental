@@ -53,7 +53,7 @@ public class VisualizerManager {
 		}
 		if (!VisualizerManager.processClass) {
 			try {
-				VisualizerManager.processClass = getDefinitionByName("mvcexpress.dlc.live::Process") as Class;
+				VisualizerManager.processClass = getDefinitionByName("mvcexpress.dlc.live.engine::Process") as Class;
 			} catch (error:Error) {
 				VisualizerManager.processClass = null;
 			}
