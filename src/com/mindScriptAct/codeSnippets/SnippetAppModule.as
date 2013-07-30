@@ -91,7 +91,7 @@ public class SnippetAppModule extends ModuleCore {
 		// start application...
 		// - mediate mainView object
 		// AND
-		// - execute commands OR send messages if needed.
+		// - execute commands OR send constants if needed.
 		////////////////////////////
 
 

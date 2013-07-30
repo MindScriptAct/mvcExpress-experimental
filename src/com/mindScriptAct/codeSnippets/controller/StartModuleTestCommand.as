@@ -14,7 +14,7 @@ public class StartModuleTestCommand extends Command {
 		// start application...
 		// - mediate mainView object
 		// AND
-		// - execute commands OR send messages if needed.
+		// - execute commands OR send constants if needed.
 		////////////////////////////
 
 		mediatorMap.mediate(main);
