@@ -32,7 +32,7 @@ public class MediatorMapLiveFlex extends MediatorMapLive {
 
 		CONFIG::debug {
 			if (!uiComponentClass) {
-				throw  Error("FlexMediatorMap failed to get 'mx.core::UIComponent' class. Are you sure you have flex project?");
+				throw  Error("FlexMediatorMap failed to get 'mx.unpureCore::UIComponent' class. Are you sure you have flex project?");
 			}
 		}
 	}
