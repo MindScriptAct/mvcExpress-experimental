@@ -24,6 +24,9 @@ public class MvceTestViewMediator extends Mediator {
 		addHandler(UnpureTestMessageTypes.PC_EM_TEST, handle_PC_EM_Test);
 		addHandler(UnpureTestMessageTypes.PP_EM_TEST, handle_PP_EM_Test);
 		addHandler(UnpureTestMessageTypes.PM_EM_TEST, handle_PM_EM_Test);
+		addHandler(UnpureTestMessageTypes.PCe_EM_TEST, handle_PCe_EM_Test);
+		addHandler(UnpureTestMessageTypes.PPe_EM_TEST, handle_PPe_EM_Test);
+		addHandler(UnpureTestMessageTypes.PMe_EM_TEST, handle_PMe_EM_Test);
 	}
 
 
@@ -55,6 +58,17 @@ public class MvceTestViewMediator extends Mediator {
 		testParam.compleate();
 	}
 
+	public function handle_PCe_EM_Test(testParam:UnpureTestVo):void {
+		testParam.compleate();
+	}
+
+	public function handle_PPe_EM_Test(testParam:UnpureTestVo):void {
+		testParam.compleate();
+	}
+
+	public function handle_PMe_EM_Test(testParam:UnpureTestVo):void {
+		testParam.compleate();
+	}
 
 	override protected function onRemove():void {
 

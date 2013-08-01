@@ -50,6 +50,18 @@ public class F_PC_TestCommand extends UnpureSimpleCommand {
 		sendNotification(UnpureTestMessageTypes.PC_PM_TEST, UnpureTestConst.PC_PM);
 		AssertExpress.isTrue(UnpureTestConst.PC_PM.isDone, "PC_EM_TEST fail.");
 
+		sendNotification(UnpureTestMessageTypes.PCe_EC_TEST, UnpureTestConst.PCe_EC);
+		AssertExpress.isTrue(UnpureTestConst.PCe_EC.isDone, "PCe_EC_TEST fail.");
+
+		sendNotification(UnpureTestMessageTypes.PCe_EM_TEST, UnpureTestConst.PCe_EM);
+		AssertExpress.isTrue(UnpureTestConst.PCe_EM.isDone, "PCe_EM_TEST fail.");
+
+		sendNotification(UnpureTestMessageTypes.PCe_PC_TEST, UnpureTestConst.PCe_PC);
+		AssertExpress.isTrue(UnpureTestConst.PCe_PC.isDone, "PCe_PC_TEST fail.");
+
+		sendNotification(UnpureTestMessageTypes.PCe_PM_TEST, UnpureTestConst.PCe_PM);
+		AssertExpress.isTrue(UnpureTestConst.PCe_PM.isDone, "PCe_EM_TEST fail.")
+
 	}
 }
 }

@@ -34,6 +34,22 @@ public class UnpureTestMessageTypes {
 	public static const PM_PM_TEST:String = "PM_PM_TEST";
 
 
+	public static const PCe_EC_TEST:String = "PCe_EC_TEST";
+	public static const PCe_EM_TEST:String = "PCe_EM_TEST";
+	public static const PCe_PC_TEST:String = "PCe_PC_TEST";
+	public static const PCe_PM_TEST:String = "PCe_PM_TEST";
+
+	public static const PPe_EC_TEST:String = "PPe_EC_TEST";
+	public static const PPe_EM_TEST:String = "PPe_EM_TEST";
+	public static const PPe_PC_TEST:String = "PPe_PC_TEST";
+	public static const PPe_PM_TEST:String = "PPe_PM_TEST";
+
+	public static const PMe_EC_TEST:String = "PMe_EC_TEST";
+	public static const PMe_EM_TEST:String = "PMe_EM_TEST";
+	public static const PMe_PC_TEST:String = "PMe_PC_TEST";
+	public static const PMe_PM_TEST:String = "PMe_PM_TEST";
+
+
 	public static const F_EC_TEST:String = "F_EC_TEST";
 	public static const F_EM_TEST:String = "F_EM_TEST";
 	public static const F_PC_TEST:String = "F_PC_TEST";

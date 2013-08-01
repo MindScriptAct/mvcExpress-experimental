@@ -29,7 +29,11 @@ public class PmvcTestViewMediator extends UnpureMediator {
 			UnpureTestMessageTypes.EM_PM_TEST, //
 			UnpureTestMessageTypes.PC_PM_TEST, //
 			UnpureTestMessageTypes.PP_PM_TEST, //
-			UnpureTestMessageTypes.PM_PM_TEST //
+			UnpureTestMessageTypes.PM_PM_TEST, //
+			UnpureTestMessageTypes.PCe_PM_TEST, //
+			UnpureTestMessageTypes.PPe_PM_TEST, //
+			UnpureTestMessageTypes.PMe_PM_TEST //
+
 		];
 	}
 
@@ -55,6 +59,15 @@ public class PmvcTestViewMediator extends UnpureMediator {
 				fpmTest.compleate();
 				break;
 			case UnpureTestMessageTypes.PM_PM_TEST:
+				fpmTest.compleate();
+				break;
+			case UnpureTestMessageTypes.PCe_PM_TEST:
+				fpmTest.compleate();
+				break;
+			case UnpureTestMessageTypes.PPe_PM_TEST:
+				fpmTest.compleate();
+				break;
+			case UnpureTestMessageTypes.PMe_PM_TEST:
 				fpmTest.compleate();
 				break;
 			default:
