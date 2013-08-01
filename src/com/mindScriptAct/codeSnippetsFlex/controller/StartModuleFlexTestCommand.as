@@ -14,7 +14,7 @@ public class StartModuleFlexTestCommand extends Command {
 		// start application...
 		// - mediate mainView object
 		// AND
-		// - execute commands OR send constants if needed.
+		// - execute commands OR send test if needed.
 		////////////////////////////
 
 		mediatorMap.mediate(main);

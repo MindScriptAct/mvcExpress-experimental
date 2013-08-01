@@ -11,7 +11,7 @@ import com.mindScriptAct.unpureMvcDemo.controller.StartupCommand;
 import mvcexpress.dlc.unpuremvc.patterns.facade.UnpureFacade;
 
 public class ApplicationFacade extends UnpureFacade {
-	// Notification name constants
+	// Notification name test
 	public static const STARTUP:String = "startup";
 
 	public static const NEW_USER:String = "newUser";
