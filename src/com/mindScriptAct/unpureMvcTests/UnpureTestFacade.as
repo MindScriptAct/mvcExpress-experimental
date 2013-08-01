@@ -9,6 +9,7 @@ import com.mindScriptAct.unpureMvcTests.mvceController.PM_EC_TestCommand;
 import com.mindScriptAct.unpureMvcTests.mvceController.PMe_EC_TestCommand;
 import com.mindScriptAct.unpureMvcTests.mvceController.PP_EC_TestCommand;
 import com.mindScriptAct.unpureMvcTests.mvceController.PPe_EC_TestCommand;
+import com.mindScriptAct.unpureMvcTests.mvceModel.MvceTest2Proxy;
 import com.mindScriptAct.unpureMvcTests.mvceModel.MvceTestProxy;
 import com.mindScriptAct.unpureMvcTests.mvceView.MvceTestViewMediator;
 import com.mindScriptAct.unpureMvcTests.pmvcController.EC_PC_TestCommand;
@@ -21,6 +22,7 @@ import com.mindScriptAct.unpureMvcTests.pmvcController.PM_PC_TestCommand;
 import com.mindScriptAct.unpureMvcTests.pmvcController.PMe_PC_TestCommand;
 import com.mindScriptAct.unpureMvcTests.pmvcController.PP_PC_TestCommand;
 import com.mindScriptAct.unpureMvcTests.pmvcController.PPe_PC_TestCommand;
+import com.mindScriptAct.unpureMvcTests.pmvcModel.PmvcTest2Proxy;
 import com.mindScriptAct.unpureMvcTests.pmvcModel.PmvcTestProxy;
 import com.mindScriptAct.unpureMvcTests.pmvcView.PmvcTestViewMediator;
 import com.mindScriptAct.unpureMvcTests.test.UnpureTestConst;
@@ -66,11 +68,18 @@ public class UnpureTestFacade extends UnpureFacade {
 		commandMap.map(UnpureTestMessageTypes.PMe_EC_TEST, PMe_EC_TestCommand);
 	}
 
+	private var pmvcTestProxy:PmvcTestProxy = new PmvcTestProxy();
+
+	private var mvceTestProxy:MvceTestProxy = new MvceTestProxy();
+
 	override protected function initializeModel():void {
 		super.initializeModel();
 
-		registerProxy(new PmvcTestProxy());
-		proxyMap.map(new MvceTestProxy())
+		registerProxy(new PmvcTest2Proxy());
+		proxyMap.map(new MvceTest2Proxy());
+
+		registerProxy(pmvcTestProxy);
+		proxyMap.map(mvceTestProxy);
 	}
 
 	override protected function initializeView():void {
@@ -92,7 +101,6 @@ public class UnpureTestFacade extends UnpureFacade {
 
 		checkClassStringConstants(UnpureTestMessageTypes);
 
-
 		sendNotification(UnpureTestMessageTypes.F_PC_TEST, UnpureTestConst.F_PC);
 		AssertExpress.isTrue(UnpureTestConst.F_PC.isDone, "F_PC_TEST failed.");
 
@@ -105,11 +113,17 @@ public class UnpureTestFacade extends UnpureFacade {
 		sendNotification(UnpureTestMessageTypes.F_EM_TEST, UnpureTestConst.F_EM);
 		AssertExpress.isTrue(UnpureTestConst.F_EM.isDone, "F_PE_TEST failed.");
 
+		pmvcTestProxy.doTest();
+
+		mvceTestProxy.doTest();
+
 
 		// check if all test are run.
 
 		if (UnpureTestVo.compleateCount != UnpureTestConst.TESTCOUNTER) {
 			trace("ERROR: not all test done ", UnpureTestVo.compleateCount, UnpureTestConst.TESTCOUNTER);
+		} else {
+			trace("ALL test done !!!!! ", UnpureTestVo.compleateCount, UnpureTestConst.TESTCOUNTER);
 		}
 	}
 
