@@ -30,6 +30,9 @@ public class PmvcTestViewMediator extends UnpureMediator {
 
 		var mvceProxy:MvceTestProxy = UnpureFacade.getInstance().hack_proxyMap.getProxy(MvceTestProxy) as MvceTestProxy;
 		AssertExpress.isNotNull(mvceProxy, "Pmvc mediator failed to get Mvce proxy.");
+
+		var pmvcMediator2:PmvcTestView2Mediator = UnpureFacade.getInstance().retrieveMediator(PmvcTestView2Mediator.NAME) as PmvcTestView2Mediator;
+		AssertExpress.isNotNull(pmvcMediator2, "Pmvc mediator failed to get Pmvc mediator.");
 	}
 
 	override public function listNotificationInterests():Array {

@@ -11,6 +11,7 @@ import com.mindScriptAct.unpureMvcTests.mvceController.PP_EC_TestCommand;
 import com.mindScriptAct.unpureMvcTests.mvceController.PPe_EC_TestCommand;
 import com.mindScriptAct.unpureMvcTests.mvceModel.MvceTest2Proxy;
 import com.mindScriptAct.unpureMvcTests.mvceModel.MvceTestProxy;
+import com.mindScriptAct.unpureMvcTests.mvceView.MvceTestView2Mediator;
 import com.mindScriptAct.unpureMvcTests.mvceView.MvceTestViewMediator;
 import com.mindScriptAct.unpureMvcTests.pmvcController.EC_PC_TestCommand;
 import com.mindScriptAct.unpureMvcTests.pmvcController.EM_PC_TestCommand;
@@ -24,11 +25,13 @@ import com.mindScriptAct.unpureMvcTests.pmvcController.PP_PC_TestCommand;
 import com.mindScriptAct.unpureMvcTests.pmvcController.PPe_PC_TestCommand;
 import com.mindScriptAct.unpureMvcTests.pmvcModel.PmvcTest2Proxy;
 import com.mindScriptAct.unpureMvcTests.pmvcModel.PmvcTestProxy;
+import com.mindScriptAct.unpureMvcTests.pmvcView.PmvcTestView2Mediator;
 import com.mindScriptAct.unpureMvcTests.pmvcView.PmvcTestViewMediator;
 import com.mindScriptAct.unpureMvcTests.test.UnpureTestConst;
 import com.mindScriptAct.unpureMvcTests.test.UnpureTestMessageTypes;
 import com.mindScriptAct.unpureMvcTests.test.UnpureTestVo;
 import com.mindScriptAct.unpureMvcTests.testView.UnpureTestView;
+import com.mindScriptAct.unpureMvcTests.testView.UnpureTestView2;
 
 import mvcexpress.dlc.unpuremvc.patterns.facade.UnpureFacade;
 import mvcexpress.utils.AssertExpress;
@@ -84,8 +87,12 @@ public class UnpureTestFacade extends UnpureFacade {
 
 	override protected function initializeView():void {
 		super.initializeView();
-		var testView:UnpureTestView = new UnpureTestView();
 
+		var testView2:UnpureTestView2 = new UnpureTestView2();
+		registerMediator(new PmvcTestView2Mediator(testView2));
+		mediatorMap.mediateWith(testView2, MvceTestView2Mediator);
+
+		var testView:UnpureTestView = new UnpureTestView();
 		registerMediator(new PmvcTestViewMediator(testView));
 		mediatorMap.map(UnpureTestView, MvceTestViewMediator);
 
