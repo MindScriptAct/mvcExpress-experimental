@@ -30,7 +30,7 @@ public class SnippetAppFlexModule extends ModuleCore {
 	// You could just delete it and let superClass handle construction.
 	////////////////////////////
 	public function SnippetAppFlexModule() {
-		super("SnippetAppModule", MediatorMapFlex);
+		super("SnippetAppModule");
 
 		trace("SnippetAppModule.START!");
 
@@ -88,6 +88,11 @@ public class SnippetAppFlexModule extends ModuleCore {
 		sendMessage(MsgFlex.TEST, "single message parameter");
 		sendMessage(MsgFlex.TEST, new ComplexParamsFlex("complex message parameters"));
 
+	}
+
+
+	override protected function initializeView():void {
+		mediatorMap = new MediatorMapFlex();
 	}
 
 	public function start(mvcExpressSnippets:MvcExpressFlexSnippets):void {

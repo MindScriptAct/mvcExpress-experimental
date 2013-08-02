@@ -6,7 +6,7 @@ import flash.display.Sprite;
  * @author rBanevicius
  */
 public class LiveViewTest extends Sprite {
-	
+
 	public function LiveViewTest() {
 		this.graphics.lineStyle(0.1, 0xFF0000);
 		this.graphics.beginFill(0x0000FF);

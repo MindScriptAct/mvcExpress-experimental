@@ -58,5 +58,6 @@ public class LiveSampleModule extends ModuleCoreLive {
 	override protected function onDispose():void {
 	}
 
+
 }
 }

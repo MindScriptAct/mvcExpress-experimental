@@ -5,8 +5,6 @@ import flash.events.IEventDispatcher;
 import flash.utils.getDefinitionByName;
 import flash.utils.getQualifiedClassName;
 
-import mvcexpress.core.*;
-import mvcexpress.core.messenger.Messenger;
 import mvcexpress.core.namespace.pureLegsCore;
 import mvcexpress.dlc.live.core.MediatorMapLive;
 import mvcexpress.mvc.Mediator;
@@ -26,10 +24,8 @@ public class MediatorMapLiveFlex extends MediatorMapLive {
 	private var uiComponentClass:Class;
 
 	/* CONSTRUCTOR */
-	public function MediatorMapLiveFlex($moduleName:String, $messenger:Messenger, $proxyMap:ProxyMap) {
+	public function MediatorMapLiveFlex($moduleName:String) {
 		uiComponentClass = getFlexClass();
-		super($moduleName, $messenger, $proxyMap);
-
 		CONFIG::debug {
 			if (!uiComponentClass) {
 				throw  Error("FlexMediatorMap failed to get 'mx.unpureCore::UIComponent' class. Are you sure you have flex project?");

@@ -23,7 +23,6 @@ public class InitProcessCommand extends CommandLive {
 		processMap.startProcess(LiveFrameProcess);
 
 
-
 		//var frameProcess:Process = processMap.initFrameProcess(TestProcess, 100);
 		//
 

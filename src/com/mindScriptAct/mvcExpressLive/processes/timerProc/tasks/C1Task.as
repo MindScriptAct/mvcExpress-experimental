@@ -1,10 +1,11 @@
 package com.mindScriptAct.mvcExpressLive.processes.timerProc.tasks {
 import com.mindScriptAct.mvcExpressLive.view.LiveViewTest;
+
 import flash.geom.Point;
 
-import mvcexpress.dlc.live.Task;
-import mvcexpress.utils.AssertExpress;
+import mvcexpress.dlc.live.engine.Task;
 
+import mvcexpress.utils.AssertExpress;
 
 /**
  * COMMENT
@@ -54,7 +55,7 @@ public class C1Task extends Task {
 		}
 	}
 
-	[Test(count="2",delay="2000")]
+	[Test(count="2", delay="2000")]
 
 	public function test_all_element_position_twice_every2Second():void {
 		trace("C1Task.test_all_element_position_twice_every2Second");

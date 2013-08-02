@@ -91,10 +91,12 @@ public class MacroCommandTest extends TestCase {
 		var command:MacroCommandTestCommand = new MacroCommandTestCommand();
 		Command.canConstruct = false;
 
-		var proxyMap:ProxyMap = new ProxyMap("_test_", null);
+		var proxyMap:ProxyMap = new ProxyMap();
+		proxyMap.initialize("_test_", null, null);
 		command.proxyMap = proxyMap;
 
-		var commandMap:CommandMap = new CommandMap("_test_", null, proxyMap, null);
+		var commandMap:CommandMap = new CommandMap();
+		commandMap.initialize("_test_", null, proxyMap, null);
 		command.commandMap = commandMap;
 
 		// Execute the SimpleCommand
