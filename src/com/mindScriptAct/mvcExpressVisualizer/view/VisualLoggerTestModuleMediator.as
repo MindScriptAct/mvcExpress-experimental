@@ -1,6 +1,6 @@
 package com.mindScriptAct.mvcExpressVisualizer.view {
 import com.bit101.components.PushButton;
-import com.mindScriptAct.mvcExpressVisualizer.VisualLoggerTestModule;
+import com.mindScriptAct.mvcExpressVisualizer.VisualLoggerTest;
 
 import mvcexpress.mvc.Mediator;
 
@@ -13,7 +13,7 @@ public class VisualLoggerTestModuleMediator extends Mediator {
 	private var testViewB2Button:PushButton;
 
 	[Inject]
-	public var view:VisualLoggerTestModule;
+	public var view:VisualLoggerTest;
 
 	//[Inject]
 	//public var myProxy:MyProxy;

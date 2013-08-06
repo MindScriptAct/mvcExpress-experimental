@@ -83,17 +83,18 @@ public class FacadeTest extends TestCase {
 		// Create the Facade, register the FacadeTestCommand to
 		// handle 'FacadeTest' notifications
 		var facade:UnpureFacade = UnpureFacade.getInstance();
-		facade.registerCommand('FacadeTestNote', FacadeTestCommand);
+		facade.registerCommand('FacadeTestNote2', FacadeTestCommand);
 
 
 		// Send notification. The Command associated with the event
 		// (FacadeTestCommand) will be invoked, and will multiply
 		// the vo.input value by 2 and set the result on vo.result
 		var vo:Object = new FacadeTestVO(32);
-		facade.sendNotification('FacadeTestNote', vo);
+		facade.sendNotification('FacadeTestNote2', vo);
 
 		// test assertions
 		assertTrue("Expecting vo.result == 64", vo.result == 64);
+
 
 	}
 
@@ -117,18 +118,20 @@ public class FacadeTest extends TestCase {
 		// Create the Facade, register the FacadeTestCommand to
 		// handle 'FacadeTest' events
 		var facade:UnpureFacade = UnpureFacade.getInstance();
-		facade.registerCommand('FacadeTestNote', FacadeTestCommand);
-		facade.removeCommand('FacadeTestNote');
+		facade.registerCommand('FacadeTestNote1', FacadeTestCommand);
+		facade.removeCommand('FacadeTestNote1');
 
 
 		// Send notification. The Command associated with the event
 		// (FacadeTestCommand) will NOT be invoked, and will NOT multiply
 		// the vo.input value by 2
 		var vo:Object = new FacadeTestVO(32);
-		facade.sendNotification('FacadeTestNote', vo);
+		facade.sendNotification('FacadeTestNote1', vo);
 
 		// test assertions
 		assertTrue("Expecting vo.result != 64", vo.result != 64);
+
+
 
 	}
 

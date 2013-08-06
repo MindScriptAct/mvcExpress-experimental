@@ -34,7 +34,7 @@ import mvcexpress.utils.checkClassStringConstants;
  * COMMENT
  * @author Raimundas Banevicius (http://www.mindscriptact.com/)
  */
-public class VisualLoggerTestModule extends Sprite {
+public class VisualLoggerTest extends Sprite {
 	private var testViewA1Button:PushButton;
 	private var testViewA1:TestViewA;
 	private var testViewA2Button:PushButton;
@@ -51,7 +51,7 @@ public class VisualLoggerTestModule extends Sprite {
 
 	public var module:TestModule = new TestModule(ModuleNames.SHELL);
 
-	public function VisualLoggerTestModule() {
+	public function VisualLoggerTest() {
 		CONFIG::debug {
 			MvcExpress.debugFunction = trace;
 			//MvcExpress.debugFunction = myDebugFunction;
@@ -90,7 +90,7 @@ public class VisualLoggerTestModule extends Sprite {
 		module.testProxyMap.map(new TestProxyB(), ITestProxyB, "BProxyName");
 
 		// set-up view
-		module.testMediatorMap.map(VisualLoggerTestModule, VisualLoggerTestModuleMediator);
+		module.testMediatorMap.map(VisualLoggerTest, VisualLoggerTestModuleMediator);
 		module.testMediatorMap.map(TestViewA, TestViewAMediator);
 		module.testMediatorMap.map(TestViewB, TestViewBMediator);
 
