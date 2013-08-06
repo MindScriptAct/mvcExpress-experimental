@@ -23,6 +23,7 @@ import com.mindscriptact.mvcExpressLogger.MvcExpressLogger;
 
 import flash.display.Shape;
 import flash.display.Sprite;
+import flash.display.StageAlign;
 import flash.display.StageScaleMode;
 import flash.events.Event;
 import flash.geom.Point;
@@ -60,6 +61,7 @@ public class VisualLoggerTest extends Sprite {
 		MvcExpressLogger.init(this.stage, 600, 0, 900, 400, 1, true, MvcExpressLogger.VISUALIZER_TAB);
 		//
 		this.stage.scaleMode = StageScaleMode.NO_SCALE;
+		this.stage.align = StageAlign.TOP_LEFT;
 
 
 		var moduleLabel:Label;

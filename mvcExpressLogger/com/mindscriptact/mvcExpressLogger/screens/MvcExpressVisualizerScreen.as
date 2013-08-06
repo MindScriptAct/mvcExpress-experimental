@@ -110,9 +110,10 @@ public class MvcExpressVisualizerScreen extends Sprite {
 	public function removeMediatorFromPossition(possition:int):void {
 		if (mediators[possition] && this.contains(mediators[possition].view)) {
 			this.removeChild(mediators[possition].view);
+			mediators.splice(possition, 1);
 		}
-		for (var i:int = possition + 1; i < mediators.length; i++) {
-			mediators[i].view.y = (i - 1) * 20 + 50;
+		for (var i:int = possition; i < mediators.length; i++) {
+			mediators[i].view.y = i * 20 + 50;
 			redrawMediatorDependencies(mediators[i]);
 		}
 	}
@@ -128,6 +129,7 @@ public class MvcExpressVisualizerScreen extends Sprite {
 	}
 
 	public function drawMediatorDependency(mediatorObject:Object, injectedObject:Object):void {
+		return;
 		for (var i:int = 0; i < proxies.length; i++) {
 			if (proxies[i].proxyObject == injectedObject) {
 				var mediatorLabel:Mvce_Label = (mediatorObject.view as Mvce_Label);
@@ -143,6 +145,7 @@ public class MvcExpressVisualizerScreen extends Sprite {
 	}
 
 	public function drawMessageToMediator(messageLogObj:Object, possition:int):void {
+		return;
 		var messageFromObject:Object;
 		var messageShape:Shape;
 //		trace(" #########################################  Drow message to mediator", messageLogObj, possition)
@@ -312,9 +315,10 @@ public class MvcExpressVisualizerScreen extends Sprite {
 	public function removeProxyFromPossition(possition:int):void {
 		if (proxies[possition] && this.contains(proxies[possition].view)) {
 			this.removeChild(proxies[possition].view);
+			proxies.splice(possition, 1);
 		}
-		for (var i:int = possition + 1; i < proxies.length; i++) {
-			proxies[i].view.y = (i - 1) * 20 + 50;
+		for (var i:int = possition; i < proxies.length; i++) {
+			proxies[i].view.y = i * 20 + 50;
 			redrawProxyDependencies(proxies[i]);
 		}
 	}
@@ -398,7 +402,7 @@ public class MvcExpressVisualizerScreen extends Sprite {
 		messageFromObject = commandLogObj.messageFromMediator;
 		if (messageFromObject) {
 			for (var j:int = 0; j < mediators.length; j++) {
-				if (mediators[j].mediatorObject == messageFromObject) {
+				if (mediators[j] && mediators[j].mediatorObject == messageFromObject) {
 					var mediatorLabel:Mvce_Label = mediators[j].view;
 					if (mediatorLabel) {
 						commandLabel.graphics.lineStyle(2, 0xFFFFD9, 0.3);
@@ -418,7 +422,7 @@ public class MvcExpressVisualizerScreen extends Sprite {
 		messageFromObject = commandLogObj.messageFromProxy;
 		if (messageFromObject) {
 			for (var k:int = 0; k < proxies.length; k++) {
-				if (proxies[k].proxyObject == messageFromObject) {
+				if (proxies[k] && proxies[k].proxyObject == messageFromObject) {
 					var proxyLabel:Mvce_Label = proxies[k].view;
 					if (proxyLabel) {
 						commandLabel.graphics.lineStyle(2, 0xFFFFD9, 0.3);
@@ -439,7 +443,7 @@ public class MvcExpressVisualizerScreen extends Sprite {
 		messageFromObject = commandLogObj.messageFromCommand;
 		if (messageFromObject) {
 			for (var m:int = 0; m < commands.length; m++) {
-				if (commands[m].commandObject == messageFromObject) {
+				if (commands[m] && commands[m].commandObject == messageFromObject) {
 					var anotherCommandLabel:Mvce_Label = commands[m].view;
 					if (anotherCommandLabel) {
 						commandLabel.graphics.lineStyle(2, 0xFFFFD9, 0.3);
