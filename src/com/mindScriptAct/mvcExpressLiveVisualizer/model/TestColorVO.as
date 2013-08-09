@@ -5,7 +5,7 @@ package com.mindScriptAct.mvcExpressLiveVisualizer.model {
  * @author rBanevicius
  */
 public class TestColorVO {
-	
+
 	public var color:uint;
 
 }

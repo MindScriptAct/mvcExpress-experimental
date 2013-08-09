@@ -11,13 +11,13 @@ import com.mindScriptAct.mvcExpressLive.view.guiTest.LiveGuiTestMediator;
 
 import flash.events.Event;
 
-import mvcexpress.extensions.live.modules.ModuleCoreLive;
+import mvcexpress.extensions.live.modules.ModuleLive;
 
 /**
  * COMMENT
  * @author Raimundas Banevicius (http://www.mindscriptact.com/)
  */
-public class LiveSampleModule extends ModuleCoreLive {
+public class LiveSampleModule extends ModuleLive {
 
 	override protected function onInit():void {
 		trace("LiveSampleModule.onInit", MediatorMapLiveFlex);

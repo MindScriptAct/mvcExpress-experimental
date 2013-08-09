@@ -7,7 +7,6 @@ import flexunit.framework.TestCase;
 import flexunit.framework.TestSuite;
 
 import mvcexpress.extensions.unpuremvc.patterns.proxy.UnpureProxy;
-
 import mvcexpress.extensions.unpuremvc.unpureCore.UnpureModel;
 
 /**

@@ -8,6 +8,8 @@ import flash.display.Sprite;
 import flash.text.TextField;
 import flash.text.TextFieldType;
 
+import mvcexpress.extensions.scoped.modules.ModuleScoped;
+
 import mvcexpress.modules.ModuleCore;
 
 /**
@@ -16,7 +18,7 @@ import mvcexpress.modules.ModuleCore;
  */
 public class Console extends Sprite {
 
-	private var module:ModuleCore;
+	private var module:ModuleScoped;
 
 	public var consoleId:int;
 
@@ -27,7 +29,7 @@ public class Console extends Sprite {
 	public function Console(consoleId:int = 0) {
 		this.consoleId = consoleId;
 
-		module = new ModuleCore(ModuleNames.CONSOLE + this.consoleId);
+		module = new ModuleScoped(ModuleNames.CONSOLE + this.consoleId);
 
 		renderConsoleView();
 

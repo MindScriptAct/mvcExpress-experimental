@@ -1,5 +1,4 @@
 package com.mindScriptAct.unpureMvcTests.pmvcView {
-import com.mindScriptAct.unpureMvcTests.testView.UnpureTestView;
 import com.mindScriptAct.unpureMvcTests.testView.UnpureTestView2;
 
 import mvcexpress.extensions.unpuremvc.patterns.mediator.UnpureMediator;

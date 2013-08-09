@@ -8,13 +8,15 @@ import com.mindScriptAct.modules.globalMessages.GlobalMessage;
 import flash.events.Event;
 import flash.events.MouseEvent;
 
+import mvcexpress.extensions.scoped.mvc.MediatorScoped;
+
 import mvcexpress.mvc.Mediator;
 
 /**
  * COMMENT
  * @author Raimundas Banevicius (http://www.mindscriptact.com/)
  */
-public class ModularSampleMediator extends Mediator {
+public class ModularSampleMediator extends MediatorScoped {
 
 	[Inject]
 	public var view:ModularSample;

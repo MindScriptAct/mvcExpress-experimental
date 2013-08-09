@@ -9,7 +9,7 @@ import flash.display.Sprite;
 import flash.display.StageAlign;
 import flash.display.StageScaleMode;
 
-import mvcexpress.modules.ModuleCore;
+import mvcexpress.extensions.scoped.modules.ModuleScoped;
 import mvcexpress.utils.checkClassStringConstants;
 
 /**
@@ -18,7 +18,7 @@ import mvcexpress.utils.checkClassStringConstants;
  */
 public class ModularSample extends Sprite {
 
-	public var module:ModuleCore = new ModuleCore("ModularSample");
+	public var module:ModuleScoped = new ModuleScoped("ModularSample");
 
 	public function ModularSample() {
 		CONFIG::debug {

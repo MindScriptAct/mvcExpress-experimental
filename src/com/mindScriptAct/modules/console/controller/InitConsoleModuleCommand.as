@@ -8,6 +8,8 @@ import com.mindScriptAct.modules.console.msg.ConsoleViewMsg;
 import com.mindScriptAct.modules.console.view.ConsoleMediator;
 import com.mindScriptAct.modules.globalMessages.GlobalMessage;
 
+import mvcexpress.extensions.scoped.mvc.CommandScoped;
+
 import mvcexpress.mvc.Command;
 import mvcexpress.utils.checkClassStringConstants;
 
@@ -15,7 +17,7 @@ import mvcexpress.utils.checkClassStringConstants;
  * TODO:CLASS COMMENT
  * @author rbanevicius
  */
-public class InitConsoleModuleCommand extends Command {
+public class InitConsoleModuleCommand extends CommandScoped {
 
 	public function execute(main:Console):void {
 		trace("Console.onInit");
@@ -36,12 +38,12 @@ public class InitConsoleModuleCommand extends Command {
 		commandMap.map(GlobalMessage.SEND_INPUT_MESSAGE_TO_ALL, HandleInputCommand);
 
 		if (main.consoleId == 1) {
-			commandMap.scopeMap(ScopeNames.FIRST_SCOPE, GlobalMessage.SEND_TARGETED_INPUT_MESSAGE, HandleInputCommand);
+			commandMapScoped.scopeMap(ScopeNames.FIRST_SCOPE, GlobalMessage.SEND_TARGETED_INPUT_MESSAGE, HandleInputCommand);
 		}
 		if (main.consoleId == 2 || main.consoleId == 4) {
-			commandMap.scopeMap(ScopeNames.EVEN_SCOPE, GlobalMessage.SEND_TARGETED_INPUT_MESSAGE, HandleInputCommand);
+			commandMapScoped.scopeMap(ScopeNames.EVEN_SCOPE, GlobalMessage.SEND_TARGETED_INPUT_MESSAGE, HandleInputCommand);
 		}
-		commandMap.scopeMap(ScopeNames.ALL_SCORE, GlobalMessage.SEND_TARGETED_INPUT_MESSAGE, HandleInputCommand);
+		commandMapScoped.scopeMap(ScopeNames.ALL_SCORE, GlobalMessage.SEND_TARGETED_INPUT_MESSAGE, HandleInputCommand);
 
 
 		// set up view

@@ -7,7 +7,6 @@ import flexunit.framework.TestCase;
 import flexunit.framework.TestSuite;
 
 import mvcexpress.extensions.unpuremvc.patterns.observer.UnpureNotification;
-
 import mvcexpress.extensions.unpuremvc.unpureCore.UnpureController;
 import mvcexpress.extensions.unpuremvc.unpureCore.UnpureView;
 

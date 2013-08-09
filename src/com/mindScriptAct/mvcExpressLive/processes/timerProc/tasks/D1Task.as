@@ -8,7 +8,7 @@ import mvcexpress.extensions.live.engine.Task;
 public class D1Task extends Task {
 
 	override public function run():void {
-		trace( "D1Task.run --------- last" );
+		trace("D1Task.run --------- last");
 
 	}
 

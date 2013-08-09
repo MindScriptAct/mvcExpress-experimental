@@ -1,8 +1,8 @@
 package com.mindScriptAct.unpureMvcTests.mvceController {
-import com.mindScriptAct.unpureMvcTests.test.UnpureTestConst;
-import com.mindScriptAct.unpureMvcTests.test.UnpureTestMessageTypes;
 import com.mindScriptAct.unpureMvcTests.mvceModel.MvceTestProxy;
 import com.mindScriptAct.unpureMvcTests.pmvcModel.PmvcTestProxy;
+import com.mindScriptAct.unpureMvcTests.test.UnpureTestConst;
+import com.mindScriptAct.unpureMvcTests.test.UnpureTestMessageTypes;
 import com.mindScriptAct.unpureMvcTests.test.UnpureTestVo;
 
 import mvcexpress.mvc.Command;
@@ -18,7 +18,7 @@ public class PCe_EC_TestCommand extends Command {
 	[Inject]
 	public var mvceProxy:MvceTestProxy;
 
-	[Inject (name="PmvcTestProxy")]
+	[Inject(name="PmvcTestProxy")]
 	public var pmvcProxy:PmvcTestProxy;
 
 

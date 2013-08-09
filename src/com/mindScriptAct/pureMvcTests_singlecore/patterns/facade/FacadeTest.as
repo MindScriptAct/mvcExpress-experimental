@@ -132,7 +132,6 @@ public class FacadeTest extends TestCase {
 		assertTrue("Expecting vo.result != 64", vo.result != 64);
 
 
-
 	}
 
 	/**

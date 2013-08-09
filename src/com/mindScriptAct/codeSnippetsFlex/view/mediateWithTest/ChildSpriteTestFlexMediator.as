@@ -1,6 +1,4 @@
 package com.mindScriptAct.codeSnippetsFlex.view.mediateWithTest {
-import com.mindScriptAct.codeSnippets.view.mediateWithTest.*;
-
 import flash.display.Sprite;
 
 import mvcexpress.mvc.Mediator;

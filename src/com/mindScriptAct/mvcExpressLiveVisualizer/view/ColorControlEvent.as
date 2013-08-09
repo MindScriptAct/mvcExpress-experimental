@@ -16,11 +16,11 @@ public class ColorControlEvent extends Event {
 	static public const REMOVE_MEDIATOR:String = "removeMediator";
 	static public const ADD_PROXY:String = "addProxy";
 	static public const REMOVE_PROXY:String = "removeProxy";
-	
+
 	public function ColorControlEvent(type:String, colorId:String) {
 		super(type);
 		this.colorId = colorId;
-	
+
 	}
 
 }

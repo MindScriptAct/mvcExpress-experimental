@@ -10,13 +10,13 @@ import com.mindScriptAct.mvcExpressLiveVisualizer.view.LiveVisualizerMediator;
 import com.mindScriptAct.mvcExpressLiveVisualizer.view.test.TestColorRectangle;
 import com.mindScriptAct.mvcExpressLiveVisualizer.view.test.TestColorRectangleMediator;
 
-import mvcexpress.extensions.live.modules.ModuleCoreLive;
+import mvcexpress.extensions.live.modules.ModuleLive;
 
 /**
  * COMMENT
  * @author Raimundas Banevicius (http://www.mindscriptact.com/)
  */
-public class LiveVisualizerModule extends ModuleCoreLive {
+public class LiveVisualizerModule extends ModuleLive {
 
 	override protected function onInit():void {
 		trace("LiveVisualizerModule.onInit");

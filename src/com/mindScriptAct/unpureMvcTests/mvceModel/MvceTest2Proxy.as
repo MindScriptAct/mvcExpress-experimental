@@ -1,9 +1,5 @@
 package com.mindScriptAct.unpureMvcTests.mvceModel {
-import com.mindScriptAct.unpureMvcTests.test.UnpureTestConst;
-import com.mindScriptAct.unpureMvcTests.test.UnpureTestMessageTypes;
-
 import mvcexpress.mvc.Proxy;
-import mvcexpress.utils.AssertExpress;
 
 /**
  * TODO:CLASS COMMENT
