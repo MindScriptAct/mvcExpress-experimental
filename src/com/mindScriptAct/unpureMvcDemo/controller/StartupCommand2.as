@@ -4,7 +4,7 @@
  Your reuse is governed by the Creative Commons Attribution 3.0 License
  */
 package com.mindScriptAct.unpureMvcDemo.controller {
-import mvcexpress.dlc.unpuremvc.patterns.command.UnpureMacroCommand;
+import mvcexpress.extensions.unpuremvc.patterns.command.UnpureMacroCommand;
 
 public class StartupCommand2 extends UnpureMacroCommand {
 	/**

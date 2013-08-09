@@ -8,9 +8,9 @@ import flash.display.Sprite;
 import flexunit.framework.TestCase;
 import flexunit.framework.TestSuite;
 
-import mvcexpress.dlc.unpuremvc.patterns.facade.UnpureFacade;
-import mvcexpress.dlc.unpuremvc.patterns.mediator.UnpureMediator;
-import mvcexpress.dlc.unpuremvc.patterns.proxy.UnpureProxy;
+import mvcexpress.extensions.unpuremvc.patterns.facade.UnpureFacade;
+import mvcexpress.extensions.unpuremvc.patterns.mediator.UnpureMediator;
+import mvcexpress.extensions.unpuremvc.patterns.proxy.UnpureProxy;
 
 /**
  * Test the PureMVC Facade class.

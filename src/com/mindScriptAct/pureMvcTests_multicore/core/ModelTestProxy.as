@@ -1,5 +1,5 @@
 package com.mindScriptAct.pureMvcTests_multicore.core {
-import mvcexpress.dlc.unpuremvc.patterns.proxy.UnpureProxy;
+import mvcexpress.extensions.unpuremvc.patterns.proxy.UnpureProxy;
 
 public class ModelTestProxy extends UnpureProxy {
 	public static const NAME:String = 'ModelTestProxy';

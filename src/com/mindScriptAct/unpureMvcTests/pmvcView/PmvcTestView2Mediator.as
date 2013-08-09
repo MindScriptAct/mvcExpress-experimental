@@ -2,8 +2,8 @@ package com.mindScriptAct.unpureMvcTests.pmvcView {
 import com.mindScriptAct.unpureMvcTests.testView.UnpureTestView;
 import com.mindScriptAct.unpureMvcTests.testView.UnpureTestView2;
 
-import mvcexpress.dlc.unpuremvc.patterns.mediator.UnpureMediator;
-import mvcexpress.dlc.unpuremvc.patterns.observer.UnpureNotification;
+import mvcexpress.extensions.unpuremvc.patterns.mediator.UnpureMediator;
+import mvcexpress.extensions.unpuremvc.patterns.observer.UnpureNotification;
 
 public class PmvcTestView2Mediator extends UnpureMediator {
 

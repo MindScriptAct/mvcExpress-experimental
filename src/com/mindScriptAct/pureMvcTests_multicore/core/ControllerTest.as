@@ -6,10 +6,10 @@ package com.mindScriptAct.pureMvcTests_multicore.core {
 import flexunit.framework.TestCase;
 import flexunit.framework.TestSuite;
 
-import mvcexpress.dlc.unpuremvc.patterns.observer.UnpureNotification;
+import mvcexpress.extensions.unpuremvc.patterns.observer.UnpureNotification;
 
-import mvcexpress.dlc.unpuremvc.unpureCore.UnpureController;
-import mvcexpress.dlc.unpuremvc.unpureCore.UnpureView;
+import mvcexpress.extensions.unpuremvc.unpureCore.UnpureController;
+import mvcexpress.extensions.unpuremvc.unpureCore.UnpureView;
 
 /**
  * Test the PureMVC Controller class.

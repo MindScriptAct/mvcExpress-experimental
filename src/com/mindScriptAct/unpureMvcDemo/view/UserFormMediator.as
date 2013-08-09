@@ -11,8 +11,8 @@ import com.mindScriptAct.unpureMvcDemo.view.components.UserForm;
 
 import flash.events.Event;
 
-import mvcexpress.dlc.unpuremvc.patterns.mediator.UnpureMediator;
-import mvcexpress.dlc.unpuremvc.patterns.observer.UnpureNotification;
+import mvcexpress.extensions.unpuremvc.patterns.mediator.UnpureMediator;
+import mvcexpress.extensions.unpuremvc.patterns.observer.UnpureNotification;
 
 public class UserFormMediator extends UnpureMediator {
 	private var userProxy:UserProxy;

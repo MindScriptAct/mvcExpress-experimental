@@ -4,8 +4,8 @@
  Your reuse is governed by the Creative Commons Attribution 3.0 License
  */
 package com.mindScriptAct.unpureMvcDemo.controller {
-import mvcexpress.dlc.unpuremvc.patterns.command.UnpureSimpleCommand;
-import mvcexpress.dlc.unpuremvc.patterns.observer.UnpureNotification;
+import mvcexpress.extensions.unpuremvc.patterns.command.UnpureSimpleCommand;
+import mvcexpress.extensions.unpuremvc.patterns.observer.UnpureNotification;
 
 import mx.controls.Alert;
 

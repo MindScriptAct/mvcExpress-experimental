@@ -6,7 +6,7 @@ package com.mindScriptAct.pureMvcTests_multicore.patterns.mediator {
 import flexunit.framework.TestCase;
 import flexunit.framework.TestSuite;
 
-import mvcexpress.dlc.unpuremvc.patterns.mediator.UnpureMediator;
+import mvcexpress.extensions.unpuremvc.patterns.mediator.UnpureMediator;
 
 /**
  * Test the PureMVC Mediator class.

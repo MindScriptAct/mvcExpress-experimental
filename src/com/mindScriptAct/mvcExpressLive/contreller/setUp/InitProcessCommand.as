@@ -3,7 +3,7 @@ package com.mindScriptAct.mvcExpressLive.contreller.setUp {
 import com.mindScriptAct.mvcExpressLive.processes.frameProc.LiveFrameProcess;
 import com.mindScriptAct.mvcExpressLive.processes.timerProc.LiveTimerProcess;
 
-import mvcexpress.dlc.live.mvc.CommandLive;
+import mvcexpress.extensions.live.mvc.CommandLive;
 
 /**
  * CLASS COMMENT

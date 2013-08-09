@@ -3,8 +3,8 @@
  Your reuse is governed by Creative Commons Attribution 2.5 License
  */
 package com.mindScriptAct.pureMvcTests_multicore.patterns.command {
-import mvcexpress.dlc.unpuremvc.patterns.command.UnpureSimpleCommand;
-import mvcexpress.dlc.unpuremvc.patterns.observer.UnpureNotification;
+import mvcexpress.extensions.unpuremvc.patterns.command.UnpureSimpleCommand;
+import mvcexpress.extensions.unpuremvc.patterns.observer.UnpureNotification;
 
 /**
  * A SimpleCommand subclass used by MacroCommandTestCommand.

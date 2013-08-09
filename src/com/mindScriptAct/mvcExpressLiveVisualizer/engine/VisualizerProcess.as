@@ -3,7 +3,7 @@ import com.mindScriptAct.mvcExpressLiveVisualizer.messages.VizualizerMessage;
 import com.mindScriptAct.mvcExpressLiveVisualizer.model.ProcessInjectProxy;
 import com.mindScriptAct.mvcExpressLiveVisualizer.view.ColorControls;
 
-import mvcexpress.dlc.live.engine.Process;
+import mvcexpress.extensions.live.engine.Process;
 
 /**
  * COMMENT

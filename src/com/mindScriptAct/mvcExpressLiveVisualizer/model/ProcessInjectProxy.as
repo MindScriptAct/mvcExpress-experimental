@@ -1,5 +1,5 @@
 package com.mindScriptAct.mvcExpressLiveVisualizer.model {
-import mvcexpress.dlc.live.mvc.ProxyLive;
+import mvcexpress.extensions.live.mvc.ProxyLive;
 
 /**
  * CLASS COMMENT

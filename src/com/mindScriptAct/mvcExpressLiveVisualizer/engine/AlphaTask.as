@@ -3,7 +3,7 @@ import com.mindScriptAct.mvcExpressLiveVisualizer.model.TestColorVO;
 
 import flash.display.Shape;
 
-import mvcexpress.dlc.live.engine.Task;
+import mvcexpress.extensions.live.engine.Task;
 
 /**
  * COMMENT

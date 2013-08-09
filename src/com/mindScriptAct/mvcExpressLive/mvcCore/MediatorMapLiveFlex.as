@@ -8,7 +8,7 @@ import flash.utils.getQualifiedClassName;
 import mvcexpress.core.*;
 import mvcexpress.core.messenger.Messenger;
 import mvcexpress.core.namespace.pureLegsCore;
-import mvcexpress.dlc.live.core.MediatorMapLive;
+import mvcexpress.extensions.live.core.MediatorMapLive;
 import mvcexpress.mvc.Mediator;
 
 /**

@@ -1,7 +1,7 @@
 package com.mindScriptAct.mvcExpressLive.view {
 import com.bit101.components.PushButton;
 import flash.events.Event;
-import mvcexpress.dlc.live.mvc.MediatorLive;
+import mvcexpress.extensions.live.mvc.MediatorLive;
 
 /**
  * CLASS COMMENT

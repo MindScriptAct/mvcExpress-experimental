@@ -1,7 +1,7 @@
 package com.mindScriptAct.mvcExpressLiveVisualizer.controller {
 import com.mindScriptAct.mvcExpressLiveVisualizer.engine.VisualizerProcess;
 
-import mvcexpress.dlc.live.mvc.CommandLive;
+import mvcexpress.extensions.live.mvc.CommandLive;
 
 /**
  * CLASS COMMENT

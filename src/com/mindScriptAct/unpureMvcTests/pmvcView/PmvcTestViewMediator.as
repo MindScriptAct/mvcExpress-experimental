@@ -6,9 +6,9 @@ import com.mindScriptAct.unpureMvcTests.test.UnpureTestMessageTypes;
 import com.mindScriptAct.unpureMvcTests.test.UnpureTestVo;
 import com.mindScriptAct.unpureMvcTests.testView.UnpureTestView;
 
-import mvcexpress.dlc.unpuremvc.patterns.facade.UnpureFacade;
-import mvcexpress.dlc.unpuremvc.patterns.mediator.UnpureMediator;
-import mvcexpress.dlc.unpuremvc.patterns.observer.UnpureNotification;
+import mvcexpress.extensions.unpuremvc.patterns.facade.UnpureFacade;
+import mvcexpress.extensions.unpuremvc.patterns.mediator.UnpureMediator;
+import mvcexpress.extensions.unpuremvc.patterns.observer.UnpureNotification;
 import mvcexpress.utils.AssertExpress;
 
 public class PmvcTestViewMediator extends UnpureMediator {

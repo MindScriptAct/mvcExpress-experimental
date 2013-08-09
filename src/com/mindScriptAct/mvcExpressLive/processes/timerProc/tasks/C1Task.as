@@ -3,7 +3,7 @@ import com.mindScriptAct.mvcExpressLive.view.LiveViewTest;
 
 import flash.geom.Point;
 
-import mvcexpress.dlc.live.engine.Task;
+import mvcexpress.extensions.live.engine.Task;
 import mvcexpress.utils.AssertExpress;
 
 /**

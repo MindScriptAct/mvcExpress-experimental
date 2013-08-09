@@ -8,7 +8,7 @@ import com.mindScriptAct.unpureMvcDemo.controller.AddRoleResultCommand;
 import com.mindScriptAct.unpureMvcDemo.controller.DeleteUserCommand;
 import com.mindScriptAct.unpureMvcDemo.controller.StartupCommand;
 
-import mvcexpress.dlc.unpuremvc.patterns.facade.UnpureFacade;
+import mvcexpress.extensions.unpuremvc.patterns.facade.UnpureFacade;
 
 public class ApplicationFacade extends UnpureFacade {
 	// Notification name test

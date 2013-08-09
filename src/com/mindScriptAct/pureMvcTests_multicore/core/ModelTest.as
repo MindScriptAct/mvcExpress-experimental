@@ -6,9 +6,9 @@ package com.mindScriptAct.pureMvcTests_multicore.core {
 import flexunit.framework.TestCase;
 import flexunit.framework.TestSuite;
 
-import mvcexpress.dlc.unpuremvc.patterns.proxy.UnpureProxy;
+import mvcexpress.extensions.unpuremvc.patterns.proxy.UnpureProxy;
 
-import mvcexpress.dlc.unpuremvc.unpureCore.UnpureModel;
+import mvcexpress.extensions.unpuremvc.unpureCore.UnpureModel;
 
 /**
  * Test the PureMVC Model class.

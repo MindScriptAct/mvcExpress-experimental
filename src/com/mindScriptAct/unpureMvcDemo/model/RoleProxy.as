@@ -8,7 +8,7 @@ import com.mindScriptAct.unpureMvcDemo.ApplicationFacade;
 import com.mindScriptAct.unpureMvcDemo.model.enum.RoleEnum;
 import com.mindScriptAct.unpureMvcDemo.model.vo.UserVO;
 
-import mvcexpress.dlc.unpuremvc.patterns.proxy.UnpureProxy;
+import mvcexpress.extensions.unpuremvc.patterns.proxy.UnpureProxy;
 
 import mx.collections.ArrayCollection;
 

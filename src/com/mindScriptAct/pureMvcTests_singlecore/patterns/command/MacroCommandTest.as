@@ -11,7 +11,7 @@ import mvcexpress.core.CommandMap;
 import mvcexpress.core.ProxyMap;
 
 import mvcexpress.core.namespace.pureLegsCore;
-import mvcexpress.dlc.unpuremvc.patterns.observer.UnpureNotification;
+import mvcexpress.extensions.unpuremvc.patterns.observer.UnpureNotification;
 import mvcexpress.mvc.Command;
 
 /**

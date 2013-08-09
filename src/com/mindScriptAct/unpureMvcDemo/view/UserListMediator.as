@@ -11,8 +11,8 @@ import com.mindScriptAct.unpureMvcDemo.view.components.UserList;
 
 import flash.events.Event;
 
-import mvcexpress.dlc.unpuremvc.patterns.mediator.UnpureMediator;
-import mvcexpress.dlc.unpuremvc.patterns.observer.UnpureNotification;
+import mvcexpress.extensions.unpuremvc.patterns.mediator.UnpureMediator;
+import mvcexpress.extensions.unpuremvc.patterns.observer.UnpureNotification;
 
 public class UserListMediator extends UnpureMediator {
 	private var userProxy:UserProxy;

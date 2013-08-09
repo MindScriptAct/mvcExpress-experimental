@@ -33,7 +33,7 @@ import com.mindScriptAct.unpureMvcTests.test.UnpureTestVo;
 import com.mindScriptAct.unpureMvcTests.testView.UnpureTestView;
 import com.mindScriptAct.unpureMvcTests.testView.UnpureTestView2;
 
-import mvcexpress.dlc.unpuremvc.patterns.facade.UnpureFacade;
+import mvcexpress.extensions.unpuremvc.patterns.facade.UnpureFacade;
 import mvcexpress.utils.AssertExpress;
 import mvcexpress.utils.checkClassStringConstants;
 

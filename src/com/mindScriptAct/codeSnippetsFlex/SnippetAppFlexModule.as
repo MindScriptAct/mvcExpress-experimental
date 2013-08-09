@@ -12,7 +12,7 @@ import com.mindScriptAct.codeSnippetsFlex.view.flexObj.TestTileFlexWindow;
 import com.mindScriptAct.codeSnippetsFlex.view.flexObj.TestTileFlexWindowMediator;
 import com.mindScriptAct.modularSample.msg.DataMsg;
 
-import mvcexpress.dlc.flex.core.MediatorMapFlex;
+import mvcexpress.extensions.flex.core.MediatorMapFlex;
 import mvcexpress.modules.ModuleCore;
 import mvcexpress.utils.checkClassStringConstants;
 

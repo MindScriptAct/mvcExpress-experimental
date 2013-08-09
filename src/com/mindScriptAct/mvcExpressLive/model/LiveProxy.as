@@ -3,7 +3,7 @@ import com.mindScriptAct.mvcExpressLive.processes.ProcessProvideNames;
 
 import flash.geom.Point;
 
-import mvcexpress.dlc.live.mvc.ProxyLive;
+import mvcexpress.extensions.live.mvc.ProxyLive;
 
 /**
  * CLASS COMMENT

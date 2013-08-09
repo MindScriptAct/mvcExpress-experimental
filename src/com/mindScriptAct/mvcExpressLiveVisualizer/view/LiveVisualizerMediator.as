@@ -14,7 +14,7 @@ import flash.display.Shape;
 import flash.events.Event;
 import flash.utils.Dictionary;
 
-import mvcexpress.dlc.live.mvc.MediatorLive;
+import mvcexpress.extensions.live.mvc.MediatorLive;
 
 /**
  * CLASS COMMENT

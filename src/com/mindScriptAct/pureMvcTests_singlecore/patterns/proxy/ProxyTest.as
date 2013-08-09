@@ -6,7 +6,7 @@ package com.mindScriptAct.pureMvcTests_singlecore.patterns.proxy {
 import flexunit.framework.TestCase;
 import flexunit.framework.TestSuite;
 
-import mvcexpress.dlc.unpuremvc.patterns.proxy.UnpureProxy;
+import mvcexpress.extensions.unpuremvc.patterns.proxy.UnpureProxy;
 
 /**
  * Test the PureMVC Proxy class.

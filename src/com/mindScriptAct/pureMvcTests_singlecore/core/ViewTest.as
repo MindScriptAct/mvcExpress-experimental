@@ -6,11 +6,11 @@ package com.mindScriptAct.pureMvcTests_singlecore.core {
 import flexunit.framework.TestCase;
 import flexunit.framework.TestSuite;
 
-import mvcexpress.dlc.unpuremvc.patterns.mediator.UnpureMediator;
+import mvcexpress.extensions.unpuremvc.patterns.mediator.UnpureMediator;
 
-import mvcexpress.dlc.unpuremvc.patterns.observer.UnpureNotification;
-import mvcexpress.dlc.unpuremvc.patterns.observer.UnpureObserver;
-import mvcexpress.dlc.unpuremvc.unpureCore.UnpureView;
+import mvcexpress.extensions.unpuremvc.patterns.observer.UnpureNotification;
+import mvcexpress.extensions.unpuremvc.patterns.observer.UnpureObserver;
+import mvcexpress.extensions.unpuremvc.unpureCore.UnpureView;
 
 /**
  * Test the PureMVC View class.

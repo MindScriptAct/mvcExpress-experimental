@@ -1,7 +1,7 @@
 package com.mindScriptAct.mvcExpressLive.view.guiTest {
 import com.bit101.components.Panel;
 
-import mvcexpress.dlc.live.mvc.MediatorLive;
+import mvcexpress.extensions.live.mvc.MediatorLive;
 
 /**
  * CLASS COMMENT

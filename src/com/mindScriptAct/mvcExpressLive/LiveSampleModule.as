@@ -11,7 +11,7 @@ import com.mindScriptAct.mvcExpressLive.view.guiTest.LiveGuiTestMediator;
 
 import flash.events.Event;
 
-import mvcexpress.dlc.live.modules.ModuleCoreLive;
+import mvcexpress.extensions.live.modules.ModuleCoreLive;
 
 /**
  * COMMENT

@@ -1,7 +1,7 @@
 package com.mindScriptAct.mvcExpressLiveVisualizer.view.test {
 import com.mindScriptAct.mvcExpressLiveVisualizer.constants.ProvideIds;
 
-import mvcexpress.dlc.live.mvc.MediatorLive;
+import mvcexpress.extensions.live.mvc.MediatorLive;
 
 /**
  * CLASS COMMENT

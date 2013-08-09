@@ -5,9 +5,9 @@ import com.mindScriptAct.unpureMvcTests.test.UnpureTestConst;
 import com.mindScriptAct.unpureMvcTests.test.UnpureTestMessageTypes;
 import com.mindScriptAct.unpureMvcTests.test.UnpureTestVo;
 
-import mvcexpress.dlc.unpuremvc.patterns.command.UnpureSimpleCommand;
-import mvcexpress.dlc.unpuremvc.patterns.facade.UnpureFacade;
-import mvcexpress.dlc.unpuremvc.patterns.observer.UnpureNotification;
+import mvcexpress.extensions.unpuremvc.patterns.command.UnpureSimpleCommand;
+import mvcexpress.extensions.unpuremvc.patterns.facade.UnpureFacade;
+import mvcexpress.extensions.unpuremvc.patterns.observer.UnpureNotification;
 import mvcexpress.utils.AssertExpress;
 
 /**

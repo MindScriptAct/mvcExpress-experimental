@@ -3,7 +3,7 @@
  Your reuse is governed by Creative Commons Attribution 2.5 License
  */
 package com.mindScriptAct.pureMvcTests_singlecore.core {
-import mvcexpress.dlc.unpuremvc.patterns.mediator.UnpureMediator;
+import mvcexpress.extensions.unpuremvc.patterns.mediator.UnpureMediator;
 
 /**
  * A Mediator class used by ViewTest.

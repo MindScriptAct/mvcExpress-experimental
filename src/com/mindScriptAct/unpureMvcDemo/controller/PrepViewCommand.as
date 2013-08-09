@@ -9,8 +9,8 @@ import com.mindScriptAct.unpureMvcDemo.view.RolePanelMediator;
 import com.mindScriptAct.unpureMvcDemo.view.UserFormMediator;
 import com.mindScriptAct.unpureMvcDemo.view.UserListMediator;
 
-import mvcexpress.dlc.unpuremvc.patterns.command.UnpureSimpleCommand;
-import mvcexpress.dlc.unpuremvc.patterns.observer.UnpureNotification;
+import mvcexpress.extensions.unpuremvc.patterns.command.UnpureSimpleCommand;
+import mvcexpress.extensions.unpuremvc.patterns.observer.UnpureNotification;
 
 public class PrepViewCommand extends UnpureSimpleCommand {
 	/**

@@ -11,8 +11,8 @@ import com.mindScriptAct.unpureMvcDemo.model.enum.RoleEnum;
 import com.mindScriptAct.unpureMvcDemo.model.vo.RoleVO;
 import com.mindScriptAct.unpureMvcDemo.model.vo.UserVO;
 
-import mvcexpress.dlc.unpuremvc.patterns.command.UnpureSimpleCommand;
-import mvcexpress.dlc.unpuremvc.patterns.observer.UnpureNotification;
+import mvcexpress.extensions.unpuremvc.patterns.command.UnpureSimpleCommand;
+import mvcexpress.extensions.unpuremvc.patterns.observer.UnpureNotification;
 
 public class PrepModelCommand extends UnpureSimpleCommand {
 	/**

@@ -4,13 +4,13 @@ import com.mindScriptAct.unpureMvcTests.mvceModel.MvceTestProxy;
 import com.mindScriptAct.unpureMvcTests.test.UnpureTestConst;
 import com.mindScriptAct.unpureMvcTests.test.UnpureTestMessageTypes;
 
-import mvcexpress.dlc.unpuremvc.patterns.facade.UnpureFacade;
+import mvcexpress.extensions.unpuremvc.patterns.facade.UnpureFacade;
 
-import mvcexpress.dlc.unpuremvc.patterns.proxy.UnpureProxy;
+import mvcexpress.extensions.unpuremvc.patterns.proxy.UnpureProxy;
 import mvcexpress.utils.AssertExpress;
 
 /**
- * An extension of <code>Proxy</code> class implementing
+ * An extensions of <code>Proxy</code> class implementing
  * <code>IProxy</code>
  */
 public class PmvcTestProxy extends UnpureProxy {

@@ -10,7 +10,7 @@ import com.mindScriptAct.mvcExpressLiveVisualizer.view.LiveVisualizerMediator;
 import com.mindScriptAct.mvcExpressLiveVisualizer.view.test.TestColorRectangle;
 import com.mindScriptAct.mvcExpressLiveVisualizer.view.test.TestColorRectangleMediator;
 
-import mvcexpress.dlc.live.modules.ModuleCoreLive;
+import mvcexpress.extensions.live.modules.ModuleCoreLive;
 
 /**
  * COMMENT

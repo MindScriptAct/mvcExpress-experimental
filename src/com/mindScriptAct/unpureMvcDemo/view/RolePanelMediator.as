@@ -12,8 +12,8 @@ import com.mindScriptAct.unpureMvcDemo.view.components.RolePanel;
 
 import flash.events.Event;
 
-import mvcexpress.dlc.unpuremvc.patterns.mediator.UnpureMediator;
-import mvcexpress.dlc.unpuremvc.patterns.observer.UnpureNotification;
+import mvcexpress.extensions.unpuremvc.patterns.mediator.UnpureMediator;
+import mvcexpress.extensions.unpuremvc.patterns.observer.UnpureNotification;
 
 public class RolePanelMediator extends UnpureMediator {
 	private var roleProxy:RoleProxy;
