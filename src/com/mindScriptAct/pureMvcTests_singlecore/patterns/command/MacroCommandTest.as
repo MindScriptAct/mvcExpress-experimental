@@ -3,6 +3,8 @@
  Your reuse is governed by Creative Commons Attribution 2.5 License
  */
 package com.mindScriptAct.pureMvcTests_singlecore.patterns.command {
+import flash.utils.Dictionary;
+
 import flexunit.framework.TestCase;
 import flexunit.framework.TestSuite;
 
@@ -93,6 +95,11 @@ public class MacroCommandTest extends TestCase {
 
 		var commandMap:CommandMap = new CommandMap("_test_", null, proxyMap, null);
 		command.commandMap = commandMap;
+
+		// extension set
+		var extensions:Dictionary = new Dictionary();
+		extensions[1] = true;
+		commandMap.setSupportedExtensions(extensions);
 
 		// Execute the SimpleCommand
 		command.execute(note);
