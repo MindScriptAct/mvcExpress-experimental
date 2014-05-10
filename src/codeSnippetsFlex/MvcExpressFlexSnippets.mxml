@@ -3,7 +3,7 @@
 			   xmlns:s="library://ns.adobe.com/flex/spark"
 			   addedToStage="creationCompleteHandler(event)">
 	<fx:Script><![CDATA[
-		import com.mindscriptact.mvcExpressLogger.MvcExpressLogger;
+		import com.mindscriptact.mvcExpressLogger.MvcLogger;
 
 		import mx.controls.Alert;
 
@@ -13,7 +13,7 @@
 
 
 			CONFIG::debug {
-				MvcExpressLogger.init(this.stage, 0, 0, 900, 500, 0.9, true, MvcExpressLogger.VISUALIZER_TAB);
+				MvcLogger.init(this.stage, 0, 0, 900, 500, 0.9, true, MvcLogger.VISUALIZER_TAB);
 			}
 
 			//
@@ -28,7 +28,7 @@
 		private function start():void {
 
 			CONFIG::debug {
-				MvcExpressLogger.init(this.stage, 0, 0, 800);
+				MvcLogger.init(this.stage, 0, 0, 800);
 			}
 
 			////////////////////////////

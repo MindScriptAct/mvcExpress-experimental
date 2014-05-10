@@ -2,7 +2,7 @@ package mvcExpressVisualizer.messages {
 
 /**
  * COMMENT
- * @author Raimundas Banevicius (http://www.mindscriptact.com/)
+ * @author Raimundas Banevicius (http://mvcexpress.org/)
  */
 public class Message {
 	static public const TEST_COMMAND_B:String = "testCommandB";

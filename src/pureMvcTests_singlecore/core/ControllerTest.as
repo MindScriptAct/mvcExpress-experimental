@@ -73,7 +73,7 @@ public class ControllerTest extends TestCase {
 	 */
 	public function testRegisterAndExecuteCommand():void {
 
-		// Create the controller, register the ControllerTestCommand to handle 'ControllerTest' notes
+		// Create the mediatorInjectTest.controller, register the ControllerTestCommand to handle 'ControllerTest' notes
 		var controller:UnpureController = UnpureController.getInstance();
 		controller.registerCommand('ControllerTest', ControllerTestCommand);
 
@@ -81,7 +81,7 @@ public class ControllerTest extends TestCase {
 		var vo:Object = new ControllerTestVO(12);
 		var note:UnpureNotification = new UnpureNotification('ControllerTest', vo);
 
-		// Tell the controller to execute the Command associated with the note
+		// Tell the mediatorInjectTest.controller to execute the Command associated with the note
 		// the ControllerTestCommand invoked will multiply the vo.input value
 		// by 2 and set the result on vo.result
 		controller.executeCommand(note);
@@ -99,7 +99,7 @@ public class ControllerTest extends TestCase {
 	 */
 	public function testRegisterAndRemoveCommand():void {
 
-		// Create the controller, register the ControllerTestCommand to handle 'ControllerTest' notes
+		// Create the mediatorInjectTest.controller, register the ControllerTestCommand to handle 'ControllerTest' notes
 		var controller:UnpureController = UnpureController.getInstance();
 		controller.registerCommand('ControllerRemoveTest', ControllerTestCommand);
 
@@ -107,7 +107,7 @@ public class ControllerTest extends TestCase {
 		var vo:Object = new ControllerTestVO(12);
 		var note:UnpureNotification = new UnpureNotification('ControllerRemoveTest', vo);
 
-		// Tell the controller to execute the Command associated with the note
+		// Tell the mediatorInjectTest.controller to execute the Command associated with the note
 		// the ControllerTestCommand invoked will multiply the vo.input value
 		// by 2 and set the result on vo.result
 		controller.executeCommand(note);
@@ -121,7 +121,7 @@ public class ControllerTest extends TestCase {
 		// Remove the Command from the Controller
 		controller.removeCommand('ControllerRemoveTest');
 
-		// Tell the controller to execute the Command associated with the
+		// Tell the mediatorInjectTest.controller to execute the Command associated with the
 		// note. This time, it should not be registered, and our vo result
 		// will not change
 		controller.executeCommand(note);
@@ -141,13 +141,13 @@ public class ControllerTest extends TestCase {
 		controller.registerCommand('hasCommandTest', ControllerTestCommand);
 
 		// test that hasCommand returns true for hasCommandTest notifications
-		assertTrue("Expecting controller.hasCommand('hasCommandTest') == true", controller.hasCommand('hasCommandTest') == true);
+		assertTrue("Expecting mediatorInjectTest.controller.hasCommand('hasCommandTest') == true", controller.hasCommand('hasCommandTest') == true);
 
 		// Remove the Command from the Controller
 		controller.removeCommand('hasCommandTest');
 
 		// test that hasCommand returns false for hasCommandTest notifications
-		assertTrue("Expecting controller.hasCommand('hasCommandTest') == false", controller.hasCommand('hasCommandTest') == false);
+		assertTrue("Expecting mediatorInjectTest.controller.hasCommand('hasCommandTest') == false", controller.hasCommand('hasCommandTest') == false);
 
 	}
 
@@ -156,7 +156,7 @@ public class ControllerTest extends TestCase {
 	 *
 	 * <P>
 	 * Tests that when a Command is re-registered that it isn't fired twice.
-	 * This involves, minimally, registration with the controller but
+	 * This involves, minimally, registration with the mediatorInjectTest.controller but
 	 * notification via the View, rather than direct execution of
 	 * the Controller's executeCommand method as is done above in
 	 * testRegisterAndRemove. The bug under test was fixed in AS3 Standard
@@ -165,7 +165,7 @@ public class ControllerTest extends TestCase {
 	 */
 	public function testReregisterAndExecuteCommand():void {
 
-		// Fetch the controller, register the ControllerTestCommand2 to handle 'ControllerTest2' notes
+		// Fetch the mediatorInjectTest.controller, register the ControllerTestCommand2 to handle 'ControllerTest2' notes
 		var controller:UnpureController = UnpureController.getInstance();
 		controller.registerCommand('ControllerTest2', ControllerTestCommand2);
 

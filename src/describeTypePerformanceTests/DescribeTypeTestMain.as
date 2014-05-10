@@ -89,7 +89,7 @@ public class DescribeTypeTestMain extends Sprite {
 		}
 		var mapRule:InjectRuleVO = new InjectRuleVO();
 		mapRule.varName = varName;
-		mapRule.injectClassAndName = injectClass + injectName;
+		mapRule.injectId = injectClass + injectName;
 		return mapRule;
 	}
 
@@ -152,7 +152,7 @@ public class DescribeTypeTestMain extends Sprite {
 		}
 		var mapRule:InjectRuleVO = new InjectRuleVO();
 		mapRule.varName = varName;
-		mapRule.injectClassAndName = injectClass + injectName;
+		mapRule.injectId = injectClass + injectName;
 		return mapRule;
 	}
 

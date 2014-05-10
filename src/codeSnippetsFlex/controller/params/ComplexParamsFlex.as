@@ -2,7 +2,7 @@ package codeSnippetsFlex.controller.params {
 
 /**
  * COMMENT
- * @author Raimundas Banevicius (http://www.mindscriptact.com/)
+ * @author Raimundas Banevicius (http://mvcexpress.org/)
  */
 public class ComplexParamsFlex {
 	public var description:String;

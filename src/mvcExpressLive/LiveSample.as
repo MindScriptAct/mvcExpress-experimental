@@ -1,5 +1,5 @@
 package mvcExpressLive {
-import com.mindscriptact.mvcExpressLogger.MvcExpressLogger;
+import com.mindscriptact.mvcExpressLogger.MvcLogger;
 
 import flash.display.Sprite;
 import flash.display.StageAlign;
@@ -9,7 +9,7 @@ import flash.utils.setTimeout;
 
 /**
  * COMMENT
- * @author Raimundas Banevicius (http://www.mindscriptact.com/)
+ * @author Raimundas Banevicius (http://mvcexpress.org/)
  */
 public class LiveSample extends Sprite {
 
@@ -35,7 +35,7 @@ public class LiveSample extends Sprite {
 
 	private function start():void {
 
-		MvcExpressLogger.init(this.stage, 600, 0, 900, 500, 0.9, true, MvcExpressLogger.VISUALIZER_TAB);
+		MvcLogger.init(this.stage, 600, 0, 900, 500, 0.9, true, MvcLogger.VISUALIZER_TAB);
 
 		////////////////////////////
 		// Inits framework.

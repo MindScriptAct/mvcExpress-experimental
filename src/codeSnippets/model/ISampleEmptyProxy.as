@@ -2,7 +2,7 @@ package codeSnippets.model {
 
 /**
  * COMMENT
- * @author Raimundas Banevicius (http://www.mindscriptact.com/)
+ * @author Raimundas Banevicius (http://mvcexpress.org/)
  */
 public interface ISampleEmptyProxy {
 	function getDescription():String;

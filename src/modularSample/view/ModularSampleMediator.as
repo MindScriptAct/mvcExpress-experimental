@@ -12,7 +12,7 @@ import mvcexpress.extensions.scoped.mvc.MediatorScoped;
 
 /**
  * COMMENT
- * @author Raimundas Banevicius (http://www.mindscriptact.com/)
+ * @author Raimundas Banevicius (http://mvcexpress.org/)
  */
 public class ModularSampleMediator extends MediatorScoped {
 

@@ -18,7 +18,7 @@ import mvcexpress.utils.checkClassStringConstants;
 
 /**
  * COMMENT
- * @author Raimundas Banevicius (http://www.mindscriptact.com/)
+ * @author Raimundas Banevicius (http://mvcexpress.org/)
  */
 public class SnippetAppFlexModule extends ModuleCore {
 	private var coreInitTime:int;
@@ -72,7 +72,7 @@ public class SnippetAppFlexModule extends ModuleCore {
 		//badCommand.execute(null);
 
 		////////////////////////////
-		// controller
+		// mediatorInjectTest.controller
 		////////////////////////////
 		commandMap.map(MsgFlex.TEST, SampleFlexCommand);
 		//commandMap.unmap(Msg.TEST, SampleCommand);

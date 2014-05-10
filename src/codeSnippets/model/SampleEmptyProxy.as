@@ -3,7 +3,7 @@ import mvcexpress.mvc.Proxy;
 
 /**
  * COMMENT
- * @author Raimundas Banevicius (http://www.mindscriptact.com/)
+ * @author Raimundas Banevicius (http://mvcexpress.org/)
  */
 public class SampleEmptyProxy extends Proxy implements ISampleEmptyProxy {
 

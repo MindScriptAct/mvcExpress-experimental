@@ -12,7 +12,7 @@ import mvcexpress.extensions.scoped.modules.ModuleScoped;
 
 /**
  * COMMENT
- * @author Raimundas Banevicius (http://www.mindscriptact.com/)
+ * @author Raimundas Banevicius (http://mvcexpress.org/)
  */
 public class Console extends Sprite {
 
@@ -31,7 +31,7 @@ public class Console extends Sprite {
 
 		renderConsoleView();
 
-		module.executeCommand(InitConsoleModuleCommand, this);
+		module.commandMap.execute(InitConsoleModuleCommand, this);
 
 
 	}

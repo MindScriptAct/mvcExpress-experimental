@@ -15,7 +15,7 @@ import mvcexpress.utils.checkClassStringConstants;
 
 /**
  * COMMENT
- * @author Raimundas Banevicius (http://www.mindscriptact.com/)
+ * @author Raimundas Banevicius (http://mvcexpress.org/)
  */
 public class SnippetAppModule extends ModuleCore {
 	private var coreInitTime:int;
@@ -68,7 +68,7 @@ public class SnippetAppModule extends ModuleCore {
 		//badCommand.execute(null);
 
 		////////////////////////////
-		// controller
+		// mediatorInjectTest.controller
 		////////////////////////////
 		commandMap.map(Msg.TEST, SampleCommand);
 		//commandMap.unmap(Msg.TEST, SampleCommand);

@@ -6,7 +6,7 @@ import mvcexpress.mvc.Mediator;
 
 /**
  * CLASS COMMENT
- * @author Raimundas Banevicius (http://www.mindscriptact.com/)
+ * @author Raimundas Banevicius (http://mvcexpress.org/)
  */
 public class VisualLoggerTestModuleMediator extends Mediator {
 	private var testViewB1Button:PushButton;

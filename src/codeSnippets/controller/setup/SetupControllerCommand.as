@@ -12,7 +12,7 @@ public class SetupControllerCommand extends Command {
 
 	public function execute(blank:Object):void {
 		////////////////////////////
-		// controller
+		// mediatorInjectTest.controller
 		////////////////////////////
 		commandMap.map(Msg.TEST, SampleCommand);
 		//commandMap.unmap(Msg.TEST, SampleCommand);

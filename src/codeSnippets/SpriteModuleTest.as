@@ -9,6 +9,7 @@ import codeSnippets.controller.setup.SetupViewCommand;
 import codeSnippets.messages.DataMsg;
 import codeSnippets.messages.Msg;
 import codeSnippets.messages.ViewMsg;
+
 import com.mindscriptact.mvcExpressLogger.MvcExpressLogger;
 
 import flash.display.Sprite;
@@ -21,7 +22,7 @@ import mvcexpress.utils.checkClassStringConstants;
 
 /**
  * COMMENT
- * @author Raimundas Banevicius (http://www.mindscriptact.com/)
+ * @author Raimundas Banevicius (http://mvcexpress.org/)
  */
 public class SpriteModuleTest extends Sprite {
 
@@ -54,21 +55,21 @@ public class SpriteModuleTest extends Sprite {
 
 
 		// setup model
-		moduleCore.executeCommand(SetupModelCommand);
+		moduleCore.commandMap.execute(SetupModelCommand);
 
 		// setup view
-		moduleCore.executeCommand(SetupViewCommand);
+		moduleCore.commandMap.execute(SetupViewCommand);
 
 
-		// setup controller
-		moduleCore.executeCommand(SetupControllerCommand);
+		// setup mediatorInjectTest.controller
+		moduleCore.commandMap.execute(SetupControllerCommand);
 
-		moduleCore.executeCommand(SampleCommand);
-		moduleCore.executeCommand(SampleCommand, "single execute parameter");
-		moduleCore.executeCommand(SampleCommand, new ComplexParams("complex execute parameters"));
+		moduleCore.commandMap.execute(SampleCommand);
+		moduleCore.commandMap.execute(SampleCommand, "single execute parameter");
+		moduleCore.commandMap.execute(SampleCommand, new ComplexParams("complex execute parameters"));
 
 		// command with many injects
-		moduleCore.executeCommand(ManyInjectsCommand);
+		moduleCore.commandMap.execute(ManyInjectsCommand);
 
 
 		////////////////////////////
@@ -79,7 +80,7 @@ public class SpriteModuleTest extends Sprite {
 		moduleCore.sendMessage(Msg.TEST, new ComplexParams("complex message parameters"));
 
 		// start app
-		moduleCore.executeCommand(StartModuleTestCommand, this);
+		moduleCore.commandMap.execute(StartModuleTestCommand, this);
 
 
 	}

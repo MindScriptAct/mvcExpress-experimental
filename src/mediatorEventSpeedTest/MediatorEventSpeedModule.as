@@ -7,7 +7,7 @@ import mvcexpress.modules.ModuleCore;
 
 /**
  * COMMENT
- * @author Raimundas Banevicius (http://www.mindscriptact.com/)
+ * @author Raimundas Banevicius (http://mvcexpress.org/)
  */
 public class MediatorEventSpeedModule extends Sprite {
 
@@ -17,7 +17,7 @@ public class MediatorEventSpeedModule extends Sprite {
 
 		trace("MediatorEventSpeedModule.onInit");
 
-		module.executeCommand(DoMediatorEventSpeedTestCommand, this);
+		module.commandMap.execute(DoMediatorEventSpeedTestCommand, this);
 
 
 	}

@@ -21,5 +21,13 @@ public class TestModule extends ModuleCore {
 	public function get testMediatorMap():MediatorMap {
 		return mediatorMap;
 	}
+
+    public function testListing():void {
+
+        trace(listMappedMessages(false));
+        trace(listMappedMediators(false));
+        trace(listMappedProxies(false));
+        trace(listMappedCommands(false));
+    }
 }
 }

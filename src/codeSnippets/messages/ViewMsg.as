@@ -2,7 +2,7 @@ package codeSnippets.messages {
 
 /**
  * COMMENT
- * @author Raimundas Banevicius (http://www.mindscriptact.com/)
+ * @author Raimundas Banevicius (http://mvcexpress.org/)
  */
 public class ViewMsg {
 

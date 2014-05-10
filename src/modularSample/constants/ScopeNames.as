@@ -2,7 +2,7 @@ package modularSample.constants {
 
 /**
  * COMMENT
- * @author Raimundas Banevicius (http://www.mindscriptact.com/)
+ * @author Raimundas Banevicius (http://mvcexpress.org/)
  */
 public class ScopeNames {
 	static public const FIRST_SCOPE:String = "firstScope";

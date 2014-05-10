@@ -1,5 +1,5 @@
 package mvcExpressLiveVisualizer {
-import com.mindscriptact.mvcExpressLogger.MvcExpressLogger;
+import com.mindscriptact.mvcExpressLogger.MvcLogger;
 
 import flash.display.Sprite;
 import flash.display.StageAlign;
@@ -11,7 +11,7 @@ import mvcexpress.modules.ModuleCore;
 
 /**
  * COMMENT
- * @author Raimundas Banevicius (http://www.mindscriptact.com/)
+ * @author Raimundas Banevicius (http://mvcexpress.org/)
  */
 public class LiveVisualizer extends Sprite {
 
@@ -38,7 +38,7 @@ public class LiveVisualizer extends Sprite {
 
 	private function start():void {
 
-		MvcExpressLogger.init(this.stage, 600, 0, 900, 500, 0.9, true, MvcExpressLogger.ENGINE_TAB);
+		MvcLogger.init(this.stage, 600, 0, 900, 500, 0.9, true, MvcLogger.ENGINE_TAB);
 
 		////////////////////////////
 		// Inits framework.

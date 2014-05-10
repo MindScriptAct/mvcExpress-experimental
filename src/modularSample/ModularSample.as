@@ -1,20 +1,21 @@
 package modularSample {
-import modularSample.controller.InitDoModuleSampleCommand;
-import modularSample.msg.DataMsg;
-import modularSample.msg.Msg;
-import modularSample.msg.ViewMsg;
 import com.mindscriptact.mvcExpressLogger.MvcExpressLogger;
 
 import flash.display.Sprite;
 import flash.display.StageAlign;
 import flash.display.StageScaleMode;
 
+import modularSample.controller.InitDoModuleSampleCommand;
+import modularSample.msg.DataMsg;
+import modularSample.msg.Msg;
+import modularSample.msg.ViewMsg;
+
 import mvcexpress.extensions.scoped.modules.ModuleScoped;
 import mvcexpress.utils.checkClassStringConstants;
 
 /**
  * COMMENT
- * @author Raimundas Banevicius (http://www.mindscriptact.com/)
+ * @author Raimundas Banevicius (http://mvcexpress.org/)
  */
 public class ModularSample extends Sprite {
 
@@ -31,7 +32,7 @@ public class ModularSample extends Sprite {
 		this.stage.scaleMode = StageScaleMode.NO_SCALE;
 
 
-		module.executeCommand(InitDoModuleSampleCommand, this);
+		module.commandMap.execute(InitDoModuleSampleCommand, this);
 
 	}
 

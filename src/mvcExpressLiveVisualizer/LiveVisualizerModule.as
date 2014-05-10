@@ -14,7 +14,7 @@ import mvcexpress.extensions.live.modules.ModuleLive;
 
 /**
  * COMMENT
- * @author Raimundas Banevicius (http://www.mindscriptact.com/)
+ * @author Raimundas Banevicius (http://mvcexpress.org/)
  */
 public class LiveVisualizerModule extends ModuleLive {
 

@@ -2,7 +2,7 @@ package modules.globalMessages {
 
 /**
  * COMMENT
- * @author Raimundas Banevicius (http://www.mindscriptact.com/)
+ * @author Raimundas Banevicius (http://mvcexpress.org/)
  */
 public class GlobalMessage {
 	static public const SEND_INPUT_MESSAGE_TO_ALL:String = "sendInputMessageToAll";

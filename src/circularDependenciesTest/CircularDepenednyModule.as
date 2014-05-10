@@ -1,5 +1,6 @@
 package circularDependenciesTest {
 import circularDependenciesTest.controller.DoCircularDependencyTestCommand;
+
 import com.mindscriptact.mvcExpressLogger.MvcExpressLogger;
 
 import flash.display.Sprite;
@@ -8,7 +9,7 @@ import mvcexpress.modules.ModuleCore;
 
 /**
  * COMMENT
- * @author Raimundas Banevicius (http://www.mindscriptact.com/)
+ * @author Raimundas Banevicius (http://mvcexpress.org/)
  */
 public class CircularDepenednyModule extends Sprite {
 
@@ -18,7 +19,7 @@ public class CircularDepenednyModule extends Sprite {
 
 		MvcExpressLogger.init(this.stage, 0, 0, 900, 500, 0.9, true, MvcExpressLogger.VISUALIZER_TAB);
 
-		module.executeCommand(DoCircularDependencyTestCommand);
+		module.commandMap.execute(DoCircularDependencyTestCommand);
 
 	}
 
