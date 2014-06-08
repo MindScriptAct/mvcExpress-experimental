@@ -44,14 +44,14 @@ public class SnippetAppModule extends ModuleCore {
 		////////////////////////////
 
 		proxyMap.map(new SampleEmptyProxy("Simple proxy"));
-		proxyMap.map(new SampleEmptyProxy("Interfaced proxy"), ISampleEmptyProxy);
-		proxyMap.map(new SampleEmptyProxy("Named proxy"), SampleEmptyProxy, "namedSampleProxy");
-		proxyMap.map(new SampleEmptyProxy("Named and interfaced proxy"), ISampleEmptyProxy, "namedSampleInterfacedProxy");
+		proxyMap.map(new SampleEmptyProxy("Interfaced proxy"), null, ISampleEmptyProxy);
+		proxyMap.map(new SampleEmptyProxy("Named proxy"), "namedSampleProxy", SampleEmptyProxy);
+		proxyMap.map(new SampleEmptyProxy("Named and interfaced proxy"), "namedSampleInterfacedProxy", ISampleEmptyProxy);
 
 		proxyMap.map(new SampleProxy());
-		proxyMap.map(new SampleProxy(), ISampleProxy);
-		proxyMap.map(new SampleProxy(), SampleProxy, "testType");
-		proxyMap.map(new SampleProxy(), ISampleProxy, "interfaceProxy");
+		proxyMap.map(new SampleProxy(), null, ISampleProxy);
+		proxyMap.map(new SampleProxy(), "testType", SampleProxy);
+		proxyMap.map(new SampleProxy(), "interfaceProxy", ISampleProxy);
 
 		////////////////////////////
 		// View

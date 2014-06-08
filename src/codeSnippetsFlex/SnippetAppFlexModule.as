@@ -10,6 +10,7 @@ import codeSnippetsFlex.model.SampleFlexProxy;
 import codeSnippetsFlex.view.SampleFlexAppMediator;
 import codeSnippetsFlex.view.flexObj.TestTileFlexWindow;
 import codeSnippetsFlex.view.flexObj.TestTileFlexWindowMediator;
+
 import modularSample.msg.DataMsg;
 
 import mvcexpress.extensions.flex.core.MediatorMapFlex;
@@ -47,14 +48,14 @@ public class SnippetAppFlexModule extends ModuleCore {
 		////////////////////////////
 
 		proxyMap.map(new SampleEmptyFlexProxy("Simple proxy"));
-		proxyMap.map(new SampleEmptyFlexProxy("Interfaced proxy"), ISampleEmptyFlexProxy);
-		proxyMap.map(new SampleEmptyFlexProxy("Named proxy"), SampleEmptyFlexProxy, "namedSampleProxy");
-		proxyMap.map(new SampleEmptyFlexProxy("Named and interfaced proxy"), ISampleEmptyFlexProxy, "namedSampleInterfacedProxy");
+		proxyMap.map(new SampleEmptyFlexProxy("Interfaced proxy"), null, ISampleEmptyFlexProxy);
+		proxyMap.map(new SampleEmptyFlexProxy("Named proxy"), "namedSampleProxy", SampleEmptyFlexProxy);
+		proxyMap.map(new SampleEmptyFlexProxy("Named and interfaced proxy"), "namedSampleInterfacedProxy", ISampleEmptyFlexProxy);
 
 		proxyMap.map(new SampleFlexProxy());
-		proxyMap.map(new SampleFlexProxy(), ISampleFlexProxy);
-		proxyMap.map(new SampleFlexProxy(), SampleFlexProxy, "testType");
-		proxyMap.map(new SampleFlexProxy(), ISampleFlexProxy, "interfaceProxy");
+		proxyMap.map(new SampleFlexProxy(), null, ISampleFlexProxy);
+		proxyMap.map(new SampleFlexProxy(), "testType", SampleFlexProxy);
+		proxyMap.map(new SampleFlexProxy(), "interfaceProxy", ISampleFlexProxy);
 
 		////////////////////////////
 		// View

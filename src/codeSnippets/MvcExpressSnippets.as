@@ -1,5 +1,5 @@
 package codeSnippets {
-import com.mindscriptact.mvcExpressLogger.MvcLogger;
+import com.mindscriptact.mvcExpressLogger.MvcExpressLogger;
 
 import flash.display.Sprite;
 import flash.display.StageAlign;
@@ -16,7 +16,7 @@ public class MvcExpressSnippets extends Sprite {
 	private var appModule:SnippetAppModule;
 
 	public function MvcExpressSnippets():void {
-		MvcLogger.init(this.stage, 0, 0, 900, 500, 0.9, true, MvcLogger.VISUALIZER_TAB);
+		MvcExpressLogger.init(this.stage, 0, 0, 900, 500, 0.9, true, MvcExpressLogger.VISUALIZER_TAB);
 		if (stage)
 			init();
 		else
@@ -38,7 +38,7 @@ public class MvcExpressSnippets extends Sprite {
 	private function start():void {
 
 		CONFIG::debug {
-			MvcLogger.init(this.stage, 0, 0, 800);
+			MvcExpressLogger.init(this.stage, 0, 0, 800);
 		}
 
 		////////////////////////////

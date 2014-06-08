@@ -13,7 +13,7 @@ public class AddTestProxyCommand extends Command {
 	//public var myProxy:MyProxy;
 
 	public function execute(colorId:String):void {
-		proxyMap.map(new ColorDataProxy(colorId), null, colorId);
+		proxyMap.map(new ColorDataProxy(colorId), colorId, null);
 	}
 
 }

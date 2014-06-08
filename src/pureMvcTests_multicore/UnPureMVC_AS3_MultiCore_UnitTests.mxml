@@ -29,7 +29,7 @@
 			ts.addTest(MacroCommandTest.suite());
 			ts.addTest(ProxyTest.suite());
 			ts.addTest(ModelTest.suite());
-			ts.addTest(mediatorInjectTest.MediatorTest.suite());
+			ts.addTest(MediatorTest.suite());
 			ts.addTest(ViewTest.suite());
 			ts.addTest(ControllerTest.suite());
 			ts.addTest(FacadeTest.suite());
