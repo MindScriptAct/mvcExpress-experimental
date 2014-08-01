@@ -7,8 +7,8 @@ import mvcexpress.mvc.Command;
  */
 public class SignalTriggeredCommand extends Command {
 
-	public function execute(blank:Object):void {
-
+	public function execute(testParams:String):void {
+		trace("SignalTriggeredCommand.execute:", testParams);
 	}
 
 }

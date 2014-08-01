@@ -3,7 +3,8 @@
  */
 package signalTest.mesages {
 public class SignalMessages {
-	public function SignalMessages() {
-	}
+
+	public static const BRIDGE_TEST:String = "TEST signals";
+
 }
 }
