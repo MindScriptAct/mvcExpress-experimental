@@ -1,6 +1,6 @@
 package blankVisualizerTest {
 import mvcExpressLiveVisualizer.*;
-import com.mindscriptact.mvcExpressLogger.MvcExpressLogger;
+import mindscriptact.mvcExpressLogger.MvcExpressLogger;
 
 import flash.display.Sprite;
 import flash.display.StageAlign;

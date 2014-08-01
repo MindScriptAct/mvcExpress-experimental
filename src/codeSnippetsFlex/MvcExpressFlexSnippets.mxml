@@ -3,7 +3,7 @@
                xmlns:s="library://ns.adobe.com/flex/spark"
                addedToStage="creationCompleteHandler(event)">
     <fx:Script><![CDATA[
-        import com.mindscriptact.mvcExpressLogger.MvcExpressLogger;
+        import mindscriptact.mvcExpressLogger.MvcExpressLogger;
 
         import mx.controls.Alert;
 

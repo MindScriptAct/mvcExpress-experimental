@@ -10,7 +10,7 @@ import codeSnippets.messages.DataMsg;
 import codeSnippets.messages.Msg;
 import codeSnippets.messages.ViewMsg;
 
-import com.mindscriptact.mvcExpressLogger.MvcExpressLogger;
+import mindscriptact.mvcExpressLogger.MvcExpressLogger;
 
 import flash.display.Sprite;
 import flash.display.StageAlign;

@@ -1,7 +1,6 @@
 package signalTest {
-import helloWorld.*;
+import mindscriptact.mvcExpressLogger.MvcExpressLogger;
 
-import com.mindscriptact.mvcExpressLogger.MvcExpressLogger;
 import flash.display.Sprite;
 import flash.events.Event;
 

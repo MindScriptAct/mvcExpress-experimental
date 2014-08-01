@@ -1,7 +1,7 @@
 package mvcExpressVisualizer {
 import com.bit101.components.Label;
 import com.bit101.components.PushButton;
-import com.mindscriptact.mvcExpressLogger.MvcExpressLogger;
+import mindscriptact.mvcExpressLogger.MvcExpressLogger;
 
 import flash.display.Shape;
 import flash.display.Sprite;
@@ -32,6 +32,7 @@ import mvcExpressVisualizer.view.testA.TestViewA;
 import mvcExpressVisualizer.view.testA.TestViewAMediator;
 import mvcExpressVisualizer.view.testB.TestViewB;
 import mvcExpressVisualizer.view.testB.TestViewBMediator;
+import mvcExpressVisualizer.view.testB.TestViewBMediator;
 
 import mvcexpress.MvcExpress;
 import mvcexpress.utils.checkClassStringConstants;
@@ -40,6 +41,7 @@ import mvcexpress.utils.checkClassStringConstants;
  * COMMENT
  * @author Raimundas Banevicius (http://mvcexpress.org/)
  */
+[SWF(width="1600", height="700", frameRate="60")]
 public class VisualLoggerTest extends Sprite {
     private var testViewA1Button:PushButton;
     private var testViewMapA1Button:PushButton;
@@ -64,7 +66,18 @@ public class VisualLoggerTest extends Sprite {
             //MvcExpress.debugFunction = myDebugFunction;
             checkClassStringConstants(Msg, DataMsg, ViewMsg);
         }
-        MvcExpressLogger.init(this.stage, 600, 0, 900, 400, 1, true, MvcExpressLogger.VISUALIZER_TAB);
+        MvcExpressLogger.init(this.stage, 600, 0, 900, 400, 1, true/*, MvcExpressLogger.VISUALIZER_TAB*/);
+
+		//MvcExpressLogger.ignoreClasses(TestCommandA);
+		//MvcExpressLogger.ignoreClasses(TestViewBMediator);
+
+//		MvcExpressLogger.moveTo(0, 0);
+//		MvcExpressLogger.resize(900, 400);
+//		MvcExpressLogger.setAlpha(0.8);
+//		MvcExpressLogger.autoShow(true);
+//		MvcExpressLogger.showTab(MvcExpressLogger.VISUALIZER_TAB);
+//		MvcExpressLogger.setKey();
+
         //
         this.stage.scaleMode = StageScaleMode.NO_SCALE;
         this.stage.align = StageAlign.TOP_LEFT;

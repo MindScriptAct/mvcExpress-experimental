@@ -1,7 +1,7 @@
 package circularDependenciesTest {
 import circularDependenciesTest.controller.DoCircularDependencyTestCommand;
 
-import com.mindscriptact.mvcExpressLogger.MvcExpressLogger;
+import mindscriptact.mvcExpressLogger.MvcExpressLogger;
 
 import flash.display.Sprite;
 
