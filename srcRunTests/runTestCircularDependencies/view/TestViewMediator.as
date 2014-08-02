@@ -1,7 +1,7 @@
-package renTestCircularDependencies.view {
-import renTestCircularDependencies.model.AProxy;
-import renTestCircularDependencies.model.BProxy;
-import renTestCircularDependencies.model.CProxy;
+package runTestCircularDependencies.view {
+import runTestCircularDependencies.model.AProxy;
+import runTestCircularDependencies.model.BProxy;
+import runTestCircularDependencies.model.CProxy;
 
 import mvcexpress.mvc.Mediator;
 

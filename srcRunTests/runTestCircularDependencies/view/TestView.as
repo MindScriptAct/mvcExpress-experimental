@@ -1,4 +1,4 @@
-package renTestCircularDependencies.view {
+package runTestCircularDependencies.view {
 import flash.display.Sprite;
 
 /**

@@ -1,26 +1,26 @@
-package renTestCircularDependencies.model {
+package runTestCircularDependencies.model {
 import mvcexpress.mvc.Proxy;
 
 /**
  * CLASS COMMENT
  * @author Raimundas Banevicius (http://mvcexpress.org/)
  */
-public class BProxy extends Proxy {
+public class CProxy extends Proxy {
 
 	[Inject]
 	public var aProxy:AProxy;
 
 	[Inject]
-	public var cProxy:CProxy;
+	public var bProxy:BProxy;
 
-	public var data:int = 3
+	public var data:int = 5;
 
-	public function BProxy() {
+	public function CProxy() {
 
 	}
 
 	override protected function onRegister():void {
-		trace("BProxy.onRegister");
+		trace("CProxy.onRegister");
 	}
 
 	override protected function onRemove():void {
@@ -28,7 +28,7 @@ public class BProxy extends Proxy {
 	}
 
 	public function getdata():int {
-		return aProxy.data * cProxy.data;
+		return aProxy.data * bProxy.data;
 	}
 
 }

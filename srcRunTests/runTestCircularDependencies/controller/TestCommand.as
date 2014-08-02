@@ -1,7 +1,7 @@
-package renTestCircularDependencies.controller {
-import renTestCircularDependencies.model.AProxy;
-import renTestCircularDependencies.model.BProxy;
-import renTestCircularDependencies.model.CProxy;
+package runTestCircularDependencies.controller {
+import runTestCircularDependencies.model.AProxy;
+import runTestCircularDependencies.model.BProxy;
+import runTestCircularDependencies.model.CProxy;
 
 import mvcexpress.mvc.Command;
 

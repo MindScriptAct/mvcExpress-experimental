@@ -1,10 +1,10 @@
-package renTestCircularDependencies.controller {
-import renTestCircularDependencies.model.AProxy;
-import renTestCircularDependencies.model.BProxy;
-import renTestCircularDependencies.model.CProxy;
-import renTestCircularDependencies.model.DProxy;
-import renTestCircularDependencies.view.TestView;
-import renTestCircularDependencies.view.TestViewMediator;
+package runTestCircularDependencies.controller {
+import runTestCircularDependencies.model.AProxy;
+import runTestCircularDependencies.model.BProxy;
+import runTestCircularDependencies.model.CProxy;
+import runTestCircularDependencies.model.DProxy;
+import runTestCircularDependencies.view.TestView;
+import runTestCircularDependencies.view.TestViewMediator;
 
 import mvcexpress.MvcExpress;
 import mvcexpress.mvc.Command;

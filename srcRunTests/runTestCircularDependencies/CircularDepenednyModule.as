@@ -1,5 +1,5 @@
-package renTestCircularDependencies {
-import renTestCircularDependencies.controller.DoCircularDependencyTestCommand;
+package runTestCircularDependencies {
+import runTestCircularDependencies.controller.DoCircularDependencyTestCommand;
 
 import mindscriptact.mvcExpressLogger.MvcExpressLogger;
 
@@ -11,12 +11,11 @@ import mvcexpress.modules.ModuleCore;
  * COMMENT
  * @author Raimundas Banevicius (http://mvcexpress.org/)
  */
-[SWF(width="1200", height="786", frameRate="60")]
-public class CircularDependencyTest extends Sprite {
+public class CircularDepenednyModule extends Sprite {
 
-	private var module:ModuleCore = new ModuleCore("CircularDependencyTest");
+	private var module:ModuleCore = new ModuleCore("CircularDepenednyModule");
 
-	public function CircularDependencyTest() {
+	public function CircularDepenednyModule() {
 
 		MvcExpressLogger.init(this.stage, 0, 0, 900, 500, 0.9, true, MvcExpressLogger.VISUALIZER_TAB);
 

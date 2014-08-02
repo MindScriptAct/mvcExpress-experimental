@@ -1,4 +1,4 @@
-package renTestCircularDependencies.model {
+package runTestCircularDependencies.model {
 import mvcexpress.mvc.Proxy;
 
 /**
