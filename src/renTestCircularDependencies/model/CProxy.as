@@ -1,0 +1,35 @@
+package renTestCircularDependencies.model {
+import mvcexpress.mvc.Proxy;
+
+/**
+ * CLASS COMMENT
+ * @author Raimundas Banevicius (http://mvcexpress.org/)
+ */
+public class CProxy extends Proxy {
+
+	[Inject]
+	public var aProxy:AProxy;
+
+	[Inject]
+	public var bProxy:BProxy;
+
+	public var data:int = 5;
+
+	public function CProxy() {
+
+	}
+
+	override protected function onRegister():void {
+		trace("CProxy.onRegister");
+	}
+
+	override protected function onRemove():void {
+
+	}
+
+	public function getdata():int {
+		return aProxy.data * bProxy.data;
+	}
+
+}
+}

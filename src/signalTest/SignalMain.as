@@ -7,7 +7,7 @@ import flash.events.Event;
 /**
  * Main application class.
  */
-
+[SWF(width="1200", height="786", frameRate="60")]
 public class SignalMain extends Sprite {
 
 	private var module:SignalMainModule;
